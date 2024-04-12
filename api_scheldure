@@ -1,25 +1,4663 @@
-//#DWR-INSERT
+//#DWR-INSER 
 //#DWR-REPLY
 //#DWR-START#
-(function() {
-    if (!window.dwr) return;
-    var dwr = window.dwr._[0];
-    var s2 = new ee.ekool.model.Country();
-    var s0 = new ee.ekool.model.institution.Institution();
-    var s1 = new ee.ekool.model.calendar.Calendar();
-    var s4 = new ee.ekool.model.ClassLevel();
-    var s12 = new ee.ekool.model.LessonTime();
-    var s5 = new ee.ekool.model.ParallelIdentifier();
-    var s6 = new ee.ekool.model.Keyword();
-    var s25 = new ee.ekool.model.Room();
-    var s35 = new ee.ekool.model.roles.Staff();
-    var s34 = new ee.ekool.model.curriculum.SubjectType();
-    var s3 = new ee.ekool.model.calendar.Workday();
-    var s7 = new ee.ekool.model.LessonTime();
-    var s10 = new ee.ekool.model.Room();
-    var s9 = new ee.ekool.model.roles.Staff();
-    var s8 = new ee.ekool.model.curriculum.SubjectType();
-    var s30 = new ee.ekool.model.LessonTime();
-    var s52 = new ee.ekool.model.Room();
-    var s37 = new ee.ekool.model.roles.Staff();
-    var s46 = new ee.ekool.model.curriculum.SubjectType();
+(function()
+{
+	if (!window.dwr) return;
+	var dwr = window.dwr._[0];
+	var s2 = new ee.ekool.model.Country();
+	var s0 = new ee.ekool.model.institution.Institution();
+	var s1 = new ee.ekool.model.calendar.Calendar();
+	var s4 = new ee.ekool.model.ClassLevel();
+	var s12 = new ee.ekool.model.LessonTime();
+	var s5 = new ee.ekool.model.ParallelIdentifier();
+	var s6 = new ee.ekool.model.Keyword();
+	var s25 = new ee.ekool.model.Room();
+	var s35 = new ee.ekool.model.roles.Staff();
+	var s34 = new ee.ekool.model.curriculum.SubjectType();
+	var s3 = new ee.ekool.model.calendar.Workday();
+	var s7 = new ee.ekool.model.LessonTime();
+	var s10 = new ee.ekool.model.Room();
+	var s9 = new ee.ekool.model.roles.Staff();
+	var s8 = new ee.ekool.model.curriculum.SubjectType();
+	var s30 = new ee.ekool.model.LessonTime();
+	var s52 = new ee.ekool.model.Room();
+	var s37 = new ee.ekool.model.roles.Staff();
+	var s46 = new ee.ekool.model.curriculum.SubjectType();
+	var s21 = new ee.ekool.model.calendar.Workday();
+	var s11 = new ee.ekool.model.calendar.Workday();
+	var s15 = new ee.ekool.model.Room();
+	var s14 = new ee.ekool.model.roles.Staff();
+	var s13 = new ee.ekool.model.curriculum.SubjectType();
+	var s17 = new ee.ekool.model.LessonTime();
+	var s20 = new ee.ekool.model.Room();
+	var s19 = new ee.ekool.model.roles.Staff();
+	var s18 = new ee.ekool.model.curriculum.SubjectType();
+	var s16 = new ee.ekool.model.calendar.Workday();
+	var s36 = new ee.ekool.model.LessonTime();
+	var s24 = new ee.ekool.model.Room();
+	var s23 = new ee.ekool.model.roles.Staff();
+	var s22 = new ee.ekool.model.curriculum.SubjectType();
+	var s31 = new ee.ekool.model.LessonTime();
+	var s38 = new ee.ekool.model.LessonTime();
+	var s61 = new ee.ekool.model.roles.Staff();
+	var s60 = new ee.ekool.model.curriculum.SubjectType();
+	var s26 = new ee.ekool.model.calendar.Workday();
+	var s42 = new ee.ekool.model.LessonTime();
+	var s56 = new ee.ekool.model.LessonTime();
+	var s29 = new ee.ekool.model.Room();
+	var s28 = new ee.ekool.model.roles.Staff();
+	var s27 = new ee.ekool.model.curriculum.SubjectType();
+	var s68 = new ee.ekool.model.Room();
+	var s70 = new ee.ekool.model.roles.Staff();
+	var s69 = new ee.ekool.model.curriculum.SubjectType();
+	var s33 = new ee.ekool.model.Room();
+	var s32 = new ee.ekool.model.roles.Staff();
+	var s39 = new ee.ekool.model.curriculum.SubjectType();
+	var s59 = new ee.ekool.model.Room();
+	var s58 = new ee.ekool.model.roles.Staff();
+	var s57 = new ee.ekool.model.curriculum.SubjectType();
+	var s72 = new ee.ekool.model.Room();
+	var s67 = new ee.ekool.model.roles.Staff();
+	var s66 = new ee.ekool.model.curriculum.SubjectType();
+	var s65 = new ee.ekool.model.roles.Staff();
+	var s64 = new ee.ekool.model.curriculum.SubjectType();
+	var s41 = new ee.ekool.model.Room();
+	var s40 = new ee.ekool.model.roles.Staff();
+	var s47 = new ee.ekool.model.curriculum.SubjectType();
+	var s45 = new ee.ekool.model.Room();
+	var s44 = new ee.ekool.model.roles.Staff();
+	var s43 = new ee.ekool.model.curriculum.SubjectType();
+	var s51 = new ee.ekool.model.LessonTime();
+	var s50 = new ee.ekool.model.Room();
+	var s49 = new ee.ekool.model.roles.Staff();
+	var s48 = new ee.ekool.model.curriculum.SubjectType();
+	var s53 = new ee.ekool.model.roles.Staff();
+	var s71 = new ee.ekool.model.curriculum.SubjectType();
+	var s55 = new ee.ekool.model.Room();
+	var s54 = new ee.ekool.model.curriculum.SubjectType();
+	var s63 = new ee.ekool.model.roles.Staff();
+	var s62 = new ee.ekool.model.curriculum.SubjectType();
+	var s73 = new ee.ekool.model.curriculum.SubjectType();
+	var s75 = new ee.ekool.model.roles.Staff();
+	var s74 = new ee.ekool.model.curriculum.SubjectType();
+	s2.countryCode = 372;
+	s2.created = '11.02.2010 12:33';
+	s2.creator = null;
+	s2.id = 1;
+	s2.inEU = true;
+	s2.instanceClass = "Country";
+	s2.isoCode = "EE";
+	s2.modified = null;
+	s2.modifiedOrig = null;
+	s2.modifier = null;
+	s2.name = "Estonia";
+	s2.optLock = 0;
+	s0.absenceLimitAmount = 5.00;
+	s0.absenceLimitAmountType = 1;
+	s0.absenceLimitType = 1;
+	s0.activeGradeTypes = null;
+	s0.address = null;
+	s0.admissions = null;
+	s0.arnoSettings = null;
+	s0.bankAccount = null;
+	s0.behaviourSchema = null;
+	s0.blogPostInstitutionRel = null;
+	s0.calendars = null;
+	s0.classLevels = null;
+	s0.clockType = null;
+	s0.code = null;
+	s0.country = s2;
+	s0.created = '20.05.2010 11:21';
+	s0.creator = "indrek importis";
+	s0.curriculums = null;
+	s0.dayEndHour = 22;
+	s0.dayStartHour = 8;
+	s0.daysInWeek = 5;
+	s0.descr = "Maardu G\u00FCmnaasium\n\n1.-9. klassid - vene \u00F5ppekeelega, v\u00E4ike- ja keelek\u00FCmblusklassid.\n\n10.-12. klassid - g\u00FCmnaasiumiklassid \n\n\u00D5htune osakond, \u00F5ppimine eesti ja vene keeles.";
+	s0.dilBehResponsibility = null;
+	s0.diligenceSchema = null;
+	s0.ehisId = "368";
+	s0.email = null;
+	s0.endDate = null;
+	s0.fileManagerEnabled = false;
+	s0.filename = null;
+	s0.headerDescr = null;
+	s0.headerImgFn = null;
+	s0.hmCanSeeInterviewProtocols = true;
+	s0.id = 263;
+	s0.idnetPresenceEnabled = false;
+	s0.idnetworkId = null;
+	s0.instanceClass = "Institution";
+	s0.institutionModules = null;
+	s0.institutionPackage = null;
+	s0.institutionType = dwr.engine.remote.newObject("ee.ekool.model.institution.InstitutionType",
+	{
+		code: "G",
+		created: '11.02.2010 12:33',
+		creator: null,
+		id: 2,
+		instanceClass: "InstitutionType",
+		modified: null,
+		modifiedOrig: null,
+		modifier: null,
+		name: "High school",
+		optLock: 0,
+		type: 0
+	});
+	s0.interviewEnabled = true;
+	s0.invoiceGenLatest = null;
+	s0.invoiceGenLockTime = null;
+	s0.isAbsenceMinutes = false;
+	s0.isPayer = true;
+	s0.joinType = 0;
+	s0.keywords = "MGM, Maardu";
+	s0.language = "et";
+	s0.lessonTimeType = 1;
+	s0.lessonTimes = null;
+	s0.library = true;
+	s0.logoImgFn = "ekool-files\/profiles\/3eea6248-619c-470b-b15e-fbaf6ff1dcb8.jpg";
+	s0.migrationStatus = 33;
+	s0.modified = '04.02.2023 21:27';
+	s0.modifiedOrig = '04.02.2023 21:27';
+	s0.modifier = "infojuht@mgm.ee";
+	s0.name = "Maardu G\u00FCmnaasium";
+	s0.optLock = 51;
+	s0.payerAddress = null;
+	s0.payerCurrentRdReference = null;
+	s0.payerEmail = null;
+	s0.payerName = null;
+	s0.payerVat = null;
+	s0.paymentMethod = 1;
+	s0.peopleListDisplayMode = dwr.engine.remote.newObject("ee.ekool.model.PeopleListDisplayMode",
+	{
+		created: '11.02.2010 12:33',
+		creator: null,
+		id: 2,
+		instanceClass: "PeopleListDisplayMode",
+		modified: null,
+		modifiedOrig: null,
+		modifier: null,
+		name: "Last, First",
+		optLock: 0
+	});
+	s0.peopleListSortMode = dwr.engine.remote.newObject("ee.ekool.model.PeopleListSortMode",
+	{
+		created: '11.02.2010 12:33',
+		creator: null,
+		id: 2,
+		instanceClass: "PeopleListSortMode",
+		modified: null,
+		modifiedOrig: null,
+		modifier: null,
+		name: "Last, First",
+		optLock: 0
+	});
+	s0.phone = null;
+	s0.productCategories = null;
+	s0.published = true;
+	s0.referrerCode = null;
+	s0.regNr = "75011961";
+	s0.schoolGroupSettings = null;
+	s0.serviceAreas = null;
+	s0.servicesBlog = null;
+	s0.servicesBlogAdmins = null;
+	s0.servicesComments = null;
+	s0.servicesCommentsNew = null;
+	s0.status = 0;
+	s0.studyYears = null;
+	s0.substitutionReasons = null;
+	s0.teacherCanAddJournal = false;
+	s0.timetableUrl = "";
+	s0.timezone = null;
+	s0.trialEmailSentTime = null;
+	s0.url = "www.mgm.ee";
+	s0.weekStart = null;
+	s0.writeToStaff = true;
+	s0.zeroLesson = false;
+	s1.calendarEvents = null;
+	s1.created = '27.09.2010 09:15';
+	s1.creator = "generated";
+	s1.endDate = '01.01.2100';
+	s1.id = 2097685866;
+	s1.instanceClass = "Calendar";
+	s1.institution = s0;
+	s1.modified = null;
+	s1.modifiedOrig = null;
+	s1.modifier = null;
+	s1.name = "Group calendar";
+	s1.optLock = 0;
+	s1.startDate = '01.01.1900';
+	s1.type = 0;
+	s4.classLevel = 10;
+	s4.created = '11.02.2010 12:33';
+	s4.creator = null;
+	s4.id = 10;
+	s4.instanceClass = "ClassLevel";
+	s4.modified = null;
+	s4.modifiedOrig = null;
+	s4.modifier = null;
+	s4.name = "Classlevel 10";
+	s4.optLock = 0;
+	s12.beginHour = "14";
+	s12.beginHourMins = "30";
+	s12.beginMin = 870;
+	s12.created = '16.08.2010 08:32';
+	s12.creator = "sergei.babenko@gmail.com";
+	s12.endHour = "15";
+	s12.endHourMins = "15";
+	s12.endMin = 915;
+	s12.id = 250114395;
+	s12.instanceClass = "LessonTime";
+	s12.institution = s0;
+	s12.lengthMins = "45";
+	s12.modified = '03.01.2023 10:24';
+	s12.modifiedOrig = '03.01.2023 10:24';
+	s12.modifier = "infojuht@mgm.ee";
+	s12.name = null;
+	s12.optLock = 8;
+	s5.archived = false;
+	s5.created = '28.08.2019 20:36';
+	s5.creator = "35611060267";
+	s5.id = 15064237382;
+	s5.instanceClass = "ParallelIdentifier";
+	s5.institution = s0;
+	s5.modified = '30.09.2020 10:15';
+	s5.modifiedOrig = '30.09.2020 10:15';
+	s5.modifier = "infojuht@mgm.ee";
+	s5.name = ".r";
+	s5.optLock = 1;
+	s6.created = '10.10.2022 14:09';
+	s6.creator = "vehov16882@botsoko.com";
+	s6.id = 17146032144;
+	s6.instanceClass = "Keyword";
+	s6.institution = s0;
+	s6.isRoom = true;
+	s6.modified = '10.10.2022 15:28';
+	s6.modifiedOrig = '10.10.2022 15:28';
+	s6.modifier = "47109030261";
+	s6.name = "Ruumid";
+	s6.optLock = 1;
+	s6.rooms = null;
+	s25.abbr = "Ajalugu";
+	s25.address = null;
+	s25.bookings = null;
+	s25.calendarEvent = null;
+	s25.capacity = "";
+	s25.created = '17.10.2012 16:16';
+	s25.creator = "46512110265";
+	s25.id = 9075588544;
+	s25.instanceClass = "Room";
+	s25.institution = s0;
+	s25.isAuto = null;
+	s25.isCalendar = null;
+	s25.isReservable = null;
+	s25.keywords = [s6];
+	s25.modified = '10.10.2022 18:44';
+	s25.modifiedOrig = '10.10.2022 18:44';
+	s25.modifier = "47109030261";
+	s25.name = "204";
+	s25.notes = "";
+	s25.optLock = 4;
+	s35.birthDay = '26.09.1983';
+	s35.cachedTagsetRoles = null;
+	s35.created = '29.08.2022 12:16';
+	s35.creator = "nastja.aa@mail.ee";
+	s35.endDate = null;
+	s35.gender = 1;
+	s35.gradingSubjects = null;
+	s35.id = 17061590254;
+	s35.idCode = "48309260312";
+	s35.idIssuedBy = s2;
+	s35.instanceClass = "Staff";
+	s35.institution = s0;
+	s35.modified = '23.10.2023 12:30';
+	s35.modifiedOrig = '23.10.2023 12:30';
+	s35.modifier = "infojuht@mgm.ee";
+	s35.name = null;
+	s35.name1 = "Anastasia";
+	s35.name2 = "Atajants";
+	s35.newAbsences = 0;
+	s35.newAbsencesTime = '12.01.2013 00:00';
+	s35.newFeedEvents = 0;
+	s35.newFeedEventsTime = '12.01.2013 00:00';
+	s35.newGrades = 0;
+	s35.newGradesTime = '12.01.2013 00:00';
+	s35.newTodos = 0;
+	s35.newTodosTime = '12.01.2013 00:00';
+	s35.optLock = 1;
+	s35.person = null;
+	s35.profileImgFn = null;
+	s35.registerPerson = null;
+	s35.startDate = '29.08.2022';
+	s35.status = 1;
+	s34.active = true;
+	s34.code = "BI";
+	s34.created = '16.08.2010 08:14';
+	s34.creator = "sergei.babenko@gmail.com";
+	s34.id = 250114363;
+	s34.instanceClass = "SubjectType";
+	s34.institution = s0;
+	s34.modified = '01.10.2020 13:56';
+	s34.modifiedOrig = '01.10.2020 13:56';
+	s34.modifier = "infojuht@mgm.ee";
+	s34.name = "Bioloogia";
+	s34.numero = 2;
+	s34.optLock = 3;
+	s3.created = '11.02.2010 12:34';
+	s3.creator = null;
+	s3.id = 1;
+	s3.instanceClass = "Workday";
+	s3.modified = null;
+	s3.modifiedOrig = null;
+	s3.modifier = null;
+	s3.name = "Sunday";
+	s3.optLock = 0;
+	s7.beginHour = "15";
+	s7.beginHourMins = "30";
+	s7.beginMin = 930;
+	s7.created = '16.08.2010 08:32';
+	s7.creator = "sergei.babenko@gmail.com";
+	s7.endHour = "16";
+	s7.endHourMins = "15";
+	s7.endMin = 975;
+	s7.id = 250114394;
+	s7.instanceClass = "LessonTime";
+	s7.institution = s0;
+	s7.lengthMins = "45";
+	s7.modified = '03.01.2023 10:24';
+	s7.modifiedOrig = '03.01.2023 10:24';
+	s7.modifier = "infojuht@mgm.ee";
+	s7.name = null;
+	s7.optLock = 6;
+	s10.abbr = "Matemaatika";
+	s10.address = null;
+	s10.bookings = null;
+	s10.calendarEvent = null;
+	s10.capacity = "";
+	s10.created = '17.10.2012 16:18';
+	s10.creator = "46512110265";
+	s10.id = 9075590546;
+	s10.instanceClass = "Room";
+	s10.institution = s0;
+	s10.isAuto = null;
+	s10.isCalendar = null;
+	s10.isReservable = null;
+	s10.keywords = [s6];
+	s10.modified = '10.10.2022 18:47';
+	s10.modifiedOrig = '10.10.2022 18:47';
+	s10.modifier = "47109030261";
+	s10.name = "304";
+	s10.notes = "";
+	s10.optLock = 3;
+	s9.birthDay = '23.06.1980';
+	s9.cachedTagsetRoles = null;
+	s9.created = '22.11.2007 14:21';
+	s9.creator = "migrator";
+	s9.endDate = null;
+	s9.gender = 1;
+	s9.gradingSubjects = null;
+	s9.id = 2000015257;
+	s9.idCode = "48006230224";
+	s9.idIssuedBy = s2;
+	s9.instanceClass = "Staff";
+	s9.institution = s0;
+	s9.modified = '01.06.2023 11:56';
+	s9.modifiedOrig = '01.06.2023 11:56';
+	s9.modifier = "infojuht@mgm.ee";
+	s9.name = null;
+	s9.name1 = "Maria";
+	s9.name2 = "Ivanova";
+	s9.newAbsences = 0;
+	s9.newAbsencesTime = '12.01.2013 00:00';
+	s9.newFeedEvents = 0;
+	s9.newFeedEventsTime = '12.01.2013 00:00';
+	s9.newGrades = 0;
+	s9.newGradesTime = '12.01.2013 00:00';
+	s9.newTodos = 0;
+	s9.newTodosTime = '12.01.2013 00:00';
+	s9.optLock = 85;
+	s9.person = null;
+	s9.profileImgFn = null;
+	s9.registerPerson = null;
+	s9.startDate = '22.11.2007';
+	s9.status = 1;
+	s8.active = true;
+	s8.code = "MTL";
+	s8.created = '17.06.2020 11:59';
+	s8.creator = "35611060267";
+	s8.id = 15552515198;
+	s8.instanceClass = "SubjectType";
+	s8.institution = s0;
+	s8.modified = '01.10.2020 13:08';
+	s8.modifiedOrig = '01.10.2020 13:08';
+	s8.modifier = "infojuht@mgm.ee";
+	s8.name = "Matemaatika lai";
+	s8.numero = 125;
+	s8.optLock = 2;
+	s30.beginHour = "09";
+	s30.beginHourMins = "50";
+	s30.beginMin = 590;
+	s30.created = '16.08.2010 08:30';
+	s30.creator = "sergei.babenko@gmail.com";
+	s30.endHour = "10";
+	s30.endHourMins = "35";
+	s30.endMin = 635;
+	s30.id = 250114389;
+	s30.instanceClass = "LessonTime";
+	s30.institution = s0;
+	s30.lengthMins = "45";
+	s30.modified = '03.01.2023 10:22';
+	s30.modifiedOrig = '03.01.2023 10:22';
+	s30.modifier = "infojuht@mgm.ee";
+	s30.name = null;
+	s30.optLock = 4;
+	s52.abbr = "";
+	s52.address = null;
+	s52.bookings = null;
+	s52.calendarEvent = null;
+	s52.capacity = "";
+	s52.created = '13.03.2020 07:56';
+	s52.creator = "47109030261";
+	s52.id = 15241746015;
+	s52.instanceClass = "Room";
+	s52.institution = s0;
+	s52.isAuto = null;
+	s52.isCalendar = null;
+	s52.isReservable = null;
+	s52.keywords = [s6];
+	s52.modified = '10.10.2022 19:03';
+	s52.modifiedOrig = '10.10.2022 19:03';
+	s52.modifier = "47109030261";
+	s52.name = "iseseisev \u00FClesanne";
+	s52.notes = "";
+	s52.optLock = 4;
+	s37.birthDay = '21.05.1986';
+	s37.cachedTagsetRoles = null;
+	s37.created = '04.04.2023 13:37';
+	s37.creator = "matthias.vanamb@mgm.ee";
+	s37.endDate = null;
+	s37.gender = 0;
+	s37.gradingSubjects = null;
+	s37.id = 17518407733;
+	s37.idCode = "38605212728";
+	s37.idIssuedBy = s2;
+	s37.instanceClass = "Staff";
+	s37.institution = s0;
+	s37.modified = '04.04.2023 13:37';
+	s37.modifiedOrig = '04.04.2023 13:37';
+	s37.modifier = "matthias.vanamb@mgm.ee";
+	s37.name = null;
+	s37.name1 = "Matthias";
+	s37.name2 = "Vanamb";
+	s37.newAbsences = 0;
+	s37.newAbsencesTime = '12.01.2013 00:00';
+	s37.newFeedEvents = 0;
+	s37.newFeedEventsTime = '12.01.2013 00:00';
+	s37.newGrades = 0;
+	s37.newGradesTime = '12.01.2013 00:00';
+	s37.newTodos = 0;
+	s37.newTodosTime = '12.01.2013 00:00';
+	s37.optLock = 0;
+	s37.person = null;
+	s37.profileImgFn = null;
+	s37.registerPerson = null;
+	s37.startDate = '04.04.2023';
+	s37.status = 1;
+	s46.active = true;
+	s46.code = "EKTK 2";
+	s46.created = '14.09.2013 20:39';
+	s46.creator = "46512110265";
+	s46.id = 13331331097;
+	s46.instanceClass = "SubjectType";
+	s46.institution = s0;
+	s46.modified = '14.11.2023 09:48';
+	s46.modifiedOrig = '14.11.2023 09:48';
+	s46.modifier = "infojuht@mgm.ee";
+	s46.name = "Eesti keel teise keelena (2r\u00FChm)";
+	s46.numero = 59;
+	s46.optLock = 3;
+	s21.created = '11.02.2010 12:34';
+	s21.creator = null;
+	s21.id = 2;
+	s21.instanceClass = "Workday";
+	s21.modified = null;
+	s21.modifiedOrig = null;
+	s21.modifier = null;
+	s21.name = "Monday";
+	s21.optLock = 0;
+	s11.created = '11.02.2010 12:34';
+	s11.creator = null;
+	s11.id = 5;
+	s11.instanceClass = "Workday";
+	s11.modified = null;
+	s11.modifiedOrig = null;
+	s11.modifier = null;
+	s11.name = "Thursday";
+	s11.optLock = 0;
+	s15.abbr = "";
+	s15.address = null;
+	s15.bookings = null;
+	s15.calendarEvent = null;
+	s15.capacity = "";
+	s15.created = '10.09.2013 18:20';
+	s15.creator = "46512110265";
+	s15.id = 13271485766;
+	s15.instanceClass = "Room";
+	s15.institution = s0;
+	s15.isAuto = null;
+	s15.isCalendar = null;
+	s15.isReservable = null;
+	s15.keywords = [s6];
+	s15.modified = '10.10.2022 18:58';
+	s15.modifiedOrig = '10.10.2022 18:58';
+	s15.modifier = "47109030261";
+	s15.name = "Spordihoone v\u00F5imla";
+	s15.notes = "";
+	s15.optLock = 5;
+	s14.birthDay = '20.06.1999';
+	s14.cachedTagsetRoles = null;
+	s14.created = '31.08.2023 10:22';
+	s14.creator = "dimastroll@mail.ru";
+	s14.endDate = null;
+	s14.gender = 0;
+	s14.gradingSubjects = null;
+	s14.id = 17707374780;
+	s14.idCode = "39906200825";
+	s14.idIssuedBy = s2;
+	s14.instanceClass = "Staff";
+	s14.institution = s0;
+	s14.modified = '31.08.2023 10:22';
+	s14.modifiedOrig = '31.08.2023 10:22';
+	s14.modifier = "dimastroll@mail.ru";
+	s14.name = null;
+	s14.name1 = "Deniss";
+	s14.name2 = "Tihhomirov";
+	s14.newAbsences = 0;
+	s14.newAbsencesTime = '12.01.2013 00:00';
+	s14.newFeedEvents = 0;
+	s14.newFeedEventsTime = '12.01.2013 00:00';
+	s14.newGrades = 0;
+	s14.newGradesTime = '12.01.2013 00:00';
+	s14.newTodos = 0;
+	s14.newTodosTime = '12.01.2013 00:00';
+	s14.optLock = 0;
+	s14.person = null;
+	s14.profileImgFn = null;
+	s14.registerPerson = null;
+	s14.startDate = '31.08.2023';
+	s14.status = 1;
+	s13.active = true;
+	s13.code = "";
+	s13.created = '19.10.2020 14:41';
+	s13.creator = "infojuht@mgm.ee";
+	s13.id = 15703278887;
+	s13.instanceClass = "SubjectType";
+	s13.institution = s0;
+	s13.modified = '30.08.2023 09:49';
+	s13.modifiedOrig = '30.08.2023 09:49';
+	s13.modifier = "infojuht@mgm.ee";
+	s13.name = "Liikumis\u00F5petus T";
+	s13.numero = 157;
+	s13.optLock = 1;
+	s17.beginHour = "13";
+	s17.beginHourMins = "35";
+	s17.beginMin = 815;
+	s17.created = '16.08.2010 08:31';
+	s17.creator = "sergei.babenko@gmail.com";
+	s17.endHour = "14";
+	s17.endHourMins = "20";
+	s17.endMin = 860;
+	s17.id = 250114393;
+	s17.instanceClass = "LessonTime";
+	s17.institution = s0;
+	s17.lengthMins = "45";
+	s17.modified = '03.01.2023 10:23';
+	s17.modifiedOrig = '03.01.2023 10:23';
+	s17.modifier = "infojuht@mgm.ee";
+	s17.name = null;
+	s17.optLock = 4;
+	s20.abbr = "Inglise keel";
+	s20.address = null;
+	s20.bookings = null;
+	s20.calendarEvent = null;
+	s20.capacity = "";
+	s20.created = '17.10.2012 16:20';
+	s20.creator = "46512110265";
+	s20.id = 9075592921;
+	s20.instanceClass = "Room";
+	s20.institution = s0;
+	s20.isAuto = null;
+	s20.isCalendar = null;
+	s20.isReservable = null;
+	s20.keywords = [s6];
+	s20.modified = '10.10.2022 18:50';
+	s20.modifiedOrig = '10.10.2022 18:50';
+	s20.modifier = "47109030261";
+	s20.name = "402";
+	s20.notes = "";
+	s20.optLock = 6;
+	s19.birthDay = '19.12.1988';
+	s19.cachedTagsetRoles = null;
+	s19.created = '22.08.2019 21:04';
+	s19.creator = "35611060267";
+	s19.endDate = null;
+	s19.gender = 1;
+	s19.gradingSubjects = null;
+	s19.id = 15061734608;
+	s19.idCode = "48812190104";
+	s19.idIssuedBy = s2;
+	s19.instanceClass = "Staff";
+	s19.institution = s0;
+	s19.modified = '01.06.2022 14:36';
+	s19.modifiedOrig = '01.06.2022 14:36';
+	s19.modifier = "infojuht@mgm.ee";
+	s19.name = null;
+	s19.name1 = "Maura";
+	s19.name2 = "Paglino";
+	s19.newAbsences = 0;
+	s19.newAbsencesTime = '12.01.2013 00:00';
+	s19.newFeedEvents = 0;
+	s19.newFeedEventsTime = '12.01.2013 00:00';
+	s19.newGrades = 0;
+	s19.newGradesTime = '12.01.2013 00:00';
+	s19.newTodos = 0;
+	s19.newTodosTime = '12.01.2013 00:00';
+	s19.optLock = 9;
+	s19.person = null;
+	s19.profileImgFn = null;
+	s19.registerPerson = null;
+	s19.startDate = '22.08.2019';
+	s19.status = 1;
+	s18.active = true;
+	s18.code = "ITA";
+	s18.created = '08.09.2019 11:19';
+	s18.creator = "35611060267";
+	s18.id = 15072521115;
+	s18.instanceClass = "SubjectType";
+	s18.institution = s0;
+	s18.modified = '08.09.2019 11:19';
+	s18.modifiedOrig = '08.09.2019 11:19';
+	s18.modifier = "35611060267";
+	s18.name = "Itaalia keel";
+	s18.numero = 101;
+	s18.optLock = 0;
+	s16.created = '11.02.2010 12:34';
+	s16.creator = null;
+	s16.id = 3;
+	s16.instanceClass = "Workday";
+	s16.modified = null;
+	s16.modifiedOrig = null;
+	s16.modifier = null;
+	s16.name = "Tuesday";
+	s16.optLock = 0;
+	s36.beginHour = "08";
+	s36.beginHourMins = "00";
+	s36.beginMin = 480;
+	s36.created = '16.08.2010 08:30';
+	s36.creator = "sergei.babenko@gmail.com";
+	s36.endHour = "08";
+	s36.endHourMins = "45";
+	s36.endMin = 525;
+	s36.id = 250114387;
+	s36.instanceClass = "LessonTime";
+	s36.institution = s0;
+	s36.lengthMins = "45";
+	s36.modified = '18.10.2019 15:44';
+	s36.modifiedOrig = '18.10.2019 15:44';
+	s36.modifier = "35611060267";
+	s36.name = null;
+	s36.optLock = 1;
+	s24.abbr = "Ajalugu";
+	s24.address = null;
+	s24.bookings = null;
+	s24.calendarEvent = null;
+	s24.capacity = "";
+	s24.created = '17.10.2012 16:21';
+	s24.creator = "46512110265";
+	s24.id = 9075594131;
+	s24.instanceClass = "Room";
+	s24.institution = s0;
+	s24.isAuto = null;
+	s24.isCalendar = null;
+	s24.isReservable = null;
+	s24.keywords = [s6];
+	s24.modified = '10.10.2022 18:52';
+	s24.modifiedOrig = '10.10.2022 18:52';
+	s24.modifier = "47109030261";
+	s24.name = "413";
+	s24.notes = "";
+	s24.optLock = 5;
+	s23.birthDay = '16.04.1970';
+	s23.cachedTagsetRoles = null;
+	s23.created = '19.11.2007 10:16';
+	s23.creator = "migrator";
+	s23.endDate = null;
+	s23.gender = 1;
+	s23.gradingSubjects = null;
+	s23.id = 2000015249;
+	s23.idCode = "47004160260";
+	s23.idIssuedBy = s2;
+	s23.instanceClass = "Staff";
+	s23.institution = s0;
+	s23.modified = '16.09.2023 20:43';
+	s23.modifiedOrig = '16.09.2023 20:43';
+	s23.modifier = "infojuht@mgm.ee";
+	s23.name = null;
+	s23.name1 = "Jelena";
+	s23.name2 = "Semendjaeva";
+	s23.newAbsences = 0;
+	s23.newAbsencesTime = '12.01.2013 00:00';
+	s23.newFeedEvents = 0;
+	s23.newFeedEventsTime = '12.01.2013 00:00';
+	s23.newGrades = 0;
+	s23.newGradesTime = '12.01.2013 00:00';
+	s23.newTodos = 0;
+	s23.newTodosTime = '12.01.2013 00:00';
+	s23.optLock = 120;
+	s23.person = null;
+	s23.profileImgFn = null;
+	s23.registerPerson = null;
+	s23.startDate = '19.11.2007';
+	s23.status = 1;
+	s22.active = true;
+	s22.code = "ETT";
+	s22.created = '08.09.2019 11:22';
+	s22.creator = "35611060267";
+	s22.id = 15072521924;
+	s22.instanceClass = "SubjectType";
+	s22.institution = s0;
+	s22.modified = '17.08.2022 10:23';
+	s22.modifiedOrig = '17.08.2022 10:23';
+	s22.modifier = "infojuht@mgm.ee";
+	s22.name = "Ettev\u00F5tlus\u00F5petus";
+	s22.numero = 103;
+	s22.optLock = 5;
+	s31.beginHour = "08";
+	s31.beginHourMins = "55";
+	s31.beginMin = 535;
+	s31.created = '16.08.2010 08:30';
+	s31.creator = "sergei.babenko@gmail.com";
+	s31.endHour = "09";
+	s31.endHourMins = "40";
+	s31.endMin = 580;
+	s31.id = 250114388;
+	s31.instanceClass = "LessonTime";
+	s31.institution = s0;
+	s31.lengthMins = "45";
+	s31.modified = '03.01.2023 10:22';
+	s31.modifiedOrig = '03.01.2023 10:22';
+	s31.modifier = "infojuht@mgm.ee";
+	s31.name = null;
+	s31.optLock = 4;
+	s38.beginHour = "10";
+	s38.beginHourMins = "45";
+	s38.beginMin = 645;
+	s38.created = '16.08.2010 08:30';
+	s38.creator = "sergei.babenko@gmail.com";
+	s38.endHour = "11";
+	s38.endHourMins = "30";
+	s38.endMin = 690;
+	s38.id = 250114390;
+	s38.instanceClass = "LessonTime";
+	s38.institution = s0;
+	s38.lengthMins = "45";
+	s38.modified = '03.01.2023 10:23';
+	s38.modifiedOrig = '03.01.2023 10:23';
+	s38.modifier = "infojuht@mgm.ee";
+	s38.name = null;
+	s38.optLock = 4;
+	s61.birthDay = '09.04.1995';
+	s61.cachedTagsetRoles = null;
+	s61.created = '25.09.2020 15:14';
+	s61.creator = "atistsenkov@gmail.com";
+	s61.endDate = null;
+	s61.gender = 0;
+	s61.gradingSubjects = null;
+	s61.id = 15648512490;
+	s61.idCode = "39504090227";
+	s61.idIssuedBy = s2;
+	s61.instanceClass = "Staff";
+	s61.institution = s0;
+	s61.modified = '25.09.2020 15:14';
+	s61.modifiedOrig = '25.09.2020 15:14';
+	s61.modifier = "atistsenkov@gmail.com";
+	s61.name = null;
+	s61.name1 = "Aleksandr";
+	s61.name2 = "Tistsenkov";
+	s61.newAbsences = 0;
+	s61.newAbsencesTime = '12.01.2013 00:00';
+	s61.newFeedEvents = 0;
+	s61.newFeedEventsTime = '12.01.2013 00:00';
+	s61.newGrades = 0;
+	s61.newGradesTime = '12.01.2013 00:00';
+	s61.newTodos = 0;
+	s61.newTodosTime = '12.01.2013 00:00';
+	s61.optLock = 0;
+	s61.person = null;
+	s61.profileImgFn = null;
+	s61.registerPerson = null;
+	s61.startDate = '25.09.2020';
+	s61.status = 1;
+	s60.active = true;
+	s60.code = "EE";
+	s60.created = '01.10.2020 13:14';
+	s60.creator = "infojuht@mgm.ee";
+	s60.id = 15662633771;
+	s60.instanceClass = "SubjectType";
+	s60.institution = s0;
+	s60.modified = '01.10.2020 13:14';
+	s60.modifiedOrig = '01.10.2020 13:14';
+	s60.modifier = "infojuht@mgm.ee";
+	s60.name = "Eesti keel teise keelena";
+	s60.numero = 134;
+	s60.optLock = 0;
+	s26.created = '11.02.2010 12:34';
+	s26.creator = null;
+	s26.id = 4;
+	s26.instanceClass = "Workday";
+	s26.modified = null;
+	s26.modifiedOrig = null;
+	s26.modifier = null;
+	s26.name = "Wednesday";
+	s26.optLock = 0;
+	s42.beginHour = "16";
+	s42.beginHourMins = "15";
+	s42.beginMin = 975;
+	s42.created = '16.08.2010 08:32';
+	s42.creator = "sergei.babenko@gmail.com";
+	s42.endHour = "17";
+	s42.endHourMins = "00";
+	s42.endMin = 1020;
+	s42.id = 250114396;
+	s42.instanceClass = "LessonTime";
+	s42.institution = s0;
+	s42.lengthMins = "45";
+	s42.modified = '03.01.2023 10:24';
+	s42.modifiedOrig = '03.01.2023 10:24';
+	s42.modifier = "infojuht@mgm.ee";
+	s42.name = null;
+	s42.optLock = 6;
+	s56.beginHour = "11";
+	s56.beginHourMins = "40";
+	s56.beginMin = 700;
+	s56.created = '16.08.2010 08:31';
+	s56.creator = "sergei.babenko@gmail.com";
+	s56.endHour = "12";
+	s56.endHourMins = "25";
+	s56.endMin = 745;
+	s56.id = 250114391;
+	s56.instanceClass = "LessonTime";
+	s56.institution = s0;
+	s56.lengthMins = "45";
+	s56.modified = '03.01.2023 10:23';
+	s56.modifiedOrig = '03.01.2023 10:23';
+	s56.modifier = "infojuht@mgm.ee";
+	s56.name = null;
+	s56.optLock = 4;
+	s29.abbr = "v\u00F5imla";
+	s29.address = null;
+	s29.bookings = null;
+	s29.calendarEvent = null;
+	s29.capacity = "";
+	s29.created = '17.10.2012 16:24';
+	s29.creator = "46512110265";
+	s29.id = 9075597400;
+	s29.instanceClass = "Room";
+	s29.institution = s0;
+	s29.isAuto = null;
+	s29.isCalendar = null;
+	s29.isReservable = null;
+	s29.keywords = [s6];
+	s29.modified = '10.10.2022 18:57';
+	s29.modifiedOrig = '10.10.2022 18:57';
+	s29.modifier = "47109030261";
+	s29.name = "v\u00F5imla";
+	s29.notes = "";
+	s29.optLock = 3;
+	s28.birthDay = '13.02.1964';
+	s28.cachedTagsetRoles = null;
+	s28.created = '30.08.2019 09:34';
+	s28.creator = "infojuht@mgm.ee";
+	s28.endDate = null;
+	s28.gender = 0;
+	s28.gradingSubjects = null;
+	s28.id = 15065181410;
+	s28.idCode = "36402130216";
+	s28.idIssuedBy = s2;
+	s28.instanceClass = "Staff";
+	s28.institution = s0;
+	s28.modified = '30.01.2024 10:35';
+	s28.modifiedOrig = '30.01.2024 10:35';
+	s28.modifier = "infojuht@mgm.ee";
+	s28.name = null;
+	s28.name1 = "Andrei";
+	s28.name2 = "Aleksejev";
+	s28.newAbsences = 0;
+	s28.newAbsencesTime = '12.01.2013 00:00';
+	s28.newFeedEvents = 0;
+	s28.newFeedEventsTime = '12.01.2013 00:00';
+	s28.newGrades = 0;
+	s28.newGradesTime = '12.01.2013 00:00';
+	s28.newTodos = 0;
+	s28.newTodosTime = '12.01.2013 00:00';
+	s28.optLock = 17;
+	s28.person = null;
+	s28.profileImgFn = null;
+	s28.registerPerson = null;
+	s28.startDate = '30.08.2019';
+	s28.status = 1;
+	s27.active = true;
+	s27.code = "";
+	s27.created = '19.10.2020 14:40';
+	s27.creator = "infojuht@mgm.ee";
+	s27.id = 15703278726;
+	s27.instanceClass = "SubjectType";
+	s27.institution = s0;
+	s27.modified = '30.08.2023 09:49';
+	s27.modifiedOrig = '30.08.2023 09:49';
+	s27.modifier = "infojuht@mgm.ee";
+	s27.name = "Liikumis\u00F5petus P";
+	s27.numero = 156;
+	s27.optLock = 1;
+	s68.abbr = "ajalugu";
+	s68.address = null;
+	s68.bookings = null;
+	s68.calendarEvent = null;
+	s68.capacity = "";
+	s68.created = '17.10.2012 16:16';
+	s68.creator = "46512110265";
+	s68.id = 9075588329;
+	s68.instanceClass = "Room";
+	s68.institution = s0;
+	s68.isAuto = null;
+	s68.isCalendar = null;
+	s68.isReservable = null;
+	s68.keywords = [s6];
+	s68.modified = '10.10.2022 18:44';
+	s68.modifiedOrig = '10.10.2022 18:44';
+	s68.modifier = "47109030261";
+	s68.name = "203";
+	s68.notes = "";
+	s68.optLock = 5;
+	s70.birthDay = '29.03.1983';
+	s70.cachedTagsetRoles = null;
+	s70.created = '02.09.2019 15:35';
+	s70.creator = "35611060267";
+	s70.endDate = null;
+	s70.gender = 1;
+	s70.gradingSubjects = null;
+	s70.id = 15067586673;
+	s70.idCode = "48303290118";
+	s70.idIssuedBy = s2;
+	s70.instanceClass = "Staff";
+	s70.institution = s0;
+	s70.modified = '29.11.2023 08:20';
+	s70.modifiedOrig = '29.11.2023 08:20';
+	s70.modifier = "infojuht@mgm.ee";
+	s70.name = null;
+	s70.name1 = "Maryna";
+	s70.name2 = "Povshenko";
+	s70.newAbsences = 0;
+	s70.newAbsencesTime = '12.01.2013 00:00';
+	s70.newFeedEvents = 0;
+	s70.newFeedEventsTime = '12.01.2013 00:00';
+	s70.newGrades = 0;
+	s70.newGradesTime = '12.01.2013 00:00';
+	s70.newTodos = 0;
+	s70.newTodosTime = '12.01.2013 00:00';
+	s70.optLock = 30;
+	s70.person = null;
+	s70.profileImgFn = null;
+	s70.registerPerson = null;
+	s70.startDate = '02.09.2019';
+	s70.status = 1;
+	s69.active = true;
+	s69.code = "TE";
+	s69.created = '16.08.2010 09:19';
+	s69.creator = "sergei.babenko@gmail.com";
+	s69.id = 250114443;
+	s69.instanceClass = "SubjectType";
+	s69.institution = s0;
+	s69.modified = '29.08.2022 13:01';
+	s69.modifiedOrig = '29.08.2022 13:01';
+	s69.modifier = "infojuht@mgm.ee";
+	s69.name = "Tervislik eluviis";
+	s69.numero = 27;
+	s69.optLock = 3;
+	s33.abbr = "Inglise keel";
+	s33.address = null;
+	s33.bookings = null;
+	s33.calendarEvent = null;
+	s33.capacity = "";
+	s33.created = '17.10.2012 16:18';
+	s33.creator = "46512110265";
+	s33.id = 9075591029;
+	s33.instanceClass = "Room";
+	s33.institution = s0;
+	s33.isAuto = null;
+	s33.isCalendar = null;
+	s33.isReservable = null;
+	s33.keywords = [s6];
+	s33.modified = '10.10.2022 18:47';
+	s33.modifiedOrig = '10.10.2022 18:47';
+	s33.modifier = "47109030261";
+	s33.name = "307";
+	s33.notes = "";
+	s33.optLock = 3;
+	s32.birthDay = '07.11.1989';
+	s32.cachedTagsetRoles = null;
+	s32.created = '02.09.2020 13:51';
+	s32.creator = "infojuht@mgm.ee";
+	s32.endDate = null;
+	s32.gender = 0;
+	s32.gradingSubjects = null;
+	s32.id = 15590476727;
+	s32.idCode = "38911070267";
+	s32.idIssuedBy = s2;
+	s32.instanceClass = "Staff";
+	s32.institution = s0;
+	s32.modified = '08.06.2023 11:30';
+	s32.modifiedOrig = '08.06.2023 11:30';
+	s32.modifier = "infojuht@mgm.ee";
+	s32.name = null;
+	s32.name1 = "Edgar";
+	s32.name2 = "Oganesjan";
+	s32.newAbsences = 0;
+	s32.newAbsencesTime = '12.01.2013 00:00';
+	s32.newFeedEvents = 0;
+	s32.newFeedEventsTime = '12.01.2013 00:00';
+	s32.newGrades = 0;
+	s32.newGradesTime = '12.01.2013 00:00';
+	s32.newTodos = 0;
+	s32.newTodosTime = '12.01.2013 00:00';
+	s32.optLock = 5;
+	s32.person = null;
+	s32.profileImgFn = null;
+	s32.registerPerson = null;
+	s32.startDate = '02.09.2020';
+	s32.status = 1;
+	s39.active = true;
+	s39.code = "EKTK 1";
+	s39.created = '01.12.2011 14:47';
+	s39.creator = "da8but@hotmail.com";
+	s39.id = 5020282041;
+	s39.instanceClass = "SubjectType";
+	s39.institution = s0;
+	s39.modified = '14.11.2023 09:43';
+	s39.modifiedOrig = '14.11.2023 09:43';
+	s39.modifier = "infojuht@mgm.ee";
+	s39.name = "Eesti keel teise keelena (1r\u00FChm)";
+	s39.numero = 39;
+	s39.optLock = 6;
+	s59.abbr = "Kunst";
+	s59.address = null;
+	s59.bookings = null;
+	s59.calendarEvent = null;
+	s59.capacity = "";
+	s59.created = '17.10.2012 16:21';
+	s59.creator = "46512110265";
+	s59.id = 9075593880;
+	s59.instanceClass = "Room";
+	s59.institution = s0;
+	s59.isAuto = null;
+	s59.isCalendar = null;
+	s59.isReservable = null;
+	s59.keywords = [s6];
+	s59.modified = '10.10.2022 18:52';
+	s59.modifiedOrig = '10.10.2022 18:52';
+	s59.modifier = "47109030261";
+	s59.name = "410";
+	s59.notes = "";
+	s59.optLock = 3;
+	s58.birthDay = '08.12.2000';
+	s58.cachedTagsetRoles = null;
+	s58.created = '27.01.2023 12:37';
+	s58.creator = "polinatalts@gmail.com";
+	s58.endDate = null;
+	s58.gender = 1;
+	s58.gradingSubjects = null;
+	s58.id = 17369937965;
+	s58.idCode = "60012080283";
+	s58.idIssuedBy = s2;
+	s58.instanceClass = "Staff";
+	s58.institution = s0;
+	s58.modified = '30.01.2023 11:36';
+	s58.modifiedOrig = '30.01.2023 11:36';
+	s58.modifier = "infojuht@mgm.ee";
+	s58.name = null;
+	s58.name1 = "Polina Angelika";
+	s58.name2 = "Talts";
+	s58.newAbsences = 0;
+	s58.newAbsencesTime = '12.01.2013 00:00';
+	s58.newFeedEvents = 0;
+	s58.newFeedEventsTime = '12.01.2013 00:00';
+	s58.newGrades = 0;
+	s58.newGradesTime = '12.01.2013 00:00';
+	s58.newTodos = 0;
+	s58.newTodosTime = '12.01.2013 00:00';
+	s58.optLock = 1;
+	s58.person = null;
+	s58.profileImgFn = null;
+	s58.registerPerson = null;
+	s58.startDate = '27.01.2023';
+	s58.status = 1;
+	s57.active = true;
+	s57.code = "K\u00DCL";
+	s57.created = '13.09.2013 23:27';
+	s57.creator = "46512110265";
+	s57.id = 13318259267;
+	s57.instanceClass = "SubjectType";
+	s57.institution = s0;
+	s57.modified = '10.09.2019 08:45';
+	s57.modifiedOrig = '10.09.2019 08:45';
+	s57.modifier = "kaidervardja@gmail.com";
+	s57.name = "Keemia \u00FClesannete lahendamine";
+	s57.numero = 43;
+	s57.optLock = 2;
+	s72.abbr = "v\u00E4ikeklass";
+	s72.address = null;
+	s72.bookings = null;
+	s72.calendarEvent = null;
+	s72.capacity = "12";
+	s72.created = '17.10.2012 16:19';
+	s72.creator = "46512110265";
+	s72.id = 9075592039;
+	s72.instanceClass = "Room";
+	s72.institution = s0;
+	s72.isAuto = null;
+	s72.isCalendar = null;
+	s72.isReservable = null;
+	s72.keywords = [s6];
+	s72.modified = '10.10.2022 18:49';
+	s72.modifiedOrig = '10.10.2022 18:49';
+	s72.modifier = "47109030261";
+	s72.name = "313";
+	s72.notes = "";
+	s72.optLock = 4;
+	s67.birthDay = '01.01.1966';
+	s67.cachedTagsetRoles = null;
+	s67.created = '15.01.2024 19:35';
+	s67.creator = "kriisatiiu@gmail.com";
+	s67.endDate = null;
+	s67.gender = 1;
+	s67.gradingSubjects = null;
+	s67.id = 17944845302;
+	s67.idCode = "46601010384";
+	s67.idIssuedBy = s2;
+	s67.instanceClass = "Staff";
+	s67.institution = s0;
+	s67.modified = '15.01.2024 19:35';
+	s67.modifiedOrig = '15.01.2024 19:35';
+	s67.modifier = "kriisatiiu@gmail.com";
+	s67.name = null;
+	s67.name1 = "Tiiu";
+	s67.name2 = "Kriisa";
+	s67.newAbsences = 0;
+	s67.newAbsencesTime = '12.01.2013 00:00';
+	s67.newFeedEvents = 0;
+	s67.newFeedEventsTime = '12.01.2013 00:00';
+	s67.newGrades = 0;
+	s67.newGradesTime = '12.01.2013 00:00';
+	s67.newTodos = 0;
+	s67.newTodosTime = '12.01.2013 00:00';
+	s67.optLock = 0;
+	s67.person = null;
+	s67.profileImgFn = null;
+	s67.registerPerson = null;
+	s67.startDate = '15.01.2024';
+	s67.status = 1;
+	s66.active = true;
+	s66.code = "";
+	s66.created = '14.09.2013 20:42';
+	s66.creator = "46512110265";
+	s66.id = 13331331214;
+	s66.instanceClass = "SubjectType";
+	s66.institution = s0;
+	s66.modified = '14.11.2023 09:47';
+	s66.modifiedOrig = '14.11.2023 09:47';
+	s66.modifier = "infojuht@mgm.ee";
+	s66.name = "Inglise keel (2r\u00FChm)";
+	s66.numero = 62;
+	s66.optLock = 4;
+	s65.birthDay = '10.05.1977';
+	s65.cachedTagsetRoles = null;
+	s65.created = '17.01.2024 13:50';
+	s65.creator = "37705106519";
+	s65.endDate = null;
+	s65.gender = 0;
+	s65.gradingSubjects = null;
+	s65.id = 17949877505;
+	s65.idCode = "37705106519";
+	s65.idIssuedBy = s2;
+	s65.instanceClass = "Staff";
+	s65.institution = s0;
+	s65.modified = '17.01.2024 13:50';
+	s65.modifiedOrig = '17.01.2024 13:50';
+	s65.modifier = "37705106519";
+	s65.name = null;
+	s65.name1 = "Ailar";
+	s65.name2 = "Lyra";
+	s65.newAbsences = 0;
+	s65.newAbsencesTime = '12.01.2013 00:00';
+	s65.newFeedEvents = 0;
+	s65.newFeedEventsTime = '12.01.2013 00:00';
+	s65.newGrades = 0;
+	s65.newGradesTime = '12.01.2013 00:00';
+	s65.newTodos = 0;
+	s65.newTodosTime = '12.01.2013 00:00';
+	s65.optLock = 0;
+	s65.person = null;
+	s65.profileImgFn = null;
+	s65.registerPerson = null;
+	s65.startDate = '17.01.2024';
+	s65.status = 1;
+	s64.active = true;
+	s64.code = "AJ";
+	s64.created = '16.08.2010 08:13';
+	s64.creator = "sergei.babenko@gmail.com";
+	s64.id = 250114361;
+	s64.instanceClass = "SubjectType";
+	s64.institution = s0;
+	s64.modified = '01.10.2020 14:04';
+	s64.modifiedOrig = '01.10.2020 14:04';
+	s64.modifier = "infojuht@mgm.ee";
+	s64.name = "Ajalugu";
+	s64.numero = 0;
+	s64.optLock = 1;
+	s41.abbr = "vene keel ja kirjandus";
+	s41.address = null;
+	s41.bookings = null;
+	s41.calendarEvent = null;
+	s41.capacity = "";
+	s41.created = '17.10.2012 16:16';
+	s41.creator = "46512110265";
+	s41.id = 9075588176;
+	s41.instanceClass = "Room";
+	s41.institution = s0;
+	s41.isAuto = null;
+	s41.isCalendar = null;
+	s41.isReservable = null;
+	s41.keywords = [s6];
+	s41.modified = '10.10.2022 18:43';
+	s41.modifiedOrig = '10.10.2022 18:43';
+	s41.modifier = "47109030261";
+	s41.name = "201";
+	s41.notes = "";
+	s41.optLock = 5;
+	s40.birthDay = '20.12.1993';
+	s40.cachedTagsetRoles = null;
+	s40.created = '14.03.2023 17:51';
+	s40.creator = "zubovitch93@gmail.com";
+	s40.endDate = null;
+	s40.gender = 0;
+	s40.gradingSubjects = null;
+	s40.id = 17470647610;
+	s40.idCode = "39312200263";
+	s40.idIssuedBy = s2;
+	s40.instanceClass = "Staff";
+	s40.institution = s0;
+	s40.modified = '14.03.2023 17:51';
+	s40.modifiedOrig = '14.03.2023 17:51';
+	s40.modifier = "zubovitch93@gmail.com";
+	s40.name = null;
+	s40.name1 = "Maksim";
+	s40.name2 = "Zubovits";
+	s40.newAbsences = 0;
+	s40.newAbsencesTime = '12.01.2013 00:00';
+	s40.newFeedEvents = 0;
+	s40.newFeedEventsTime = '12.01.2013 00:00';
+	s40.newGrades = 0;
+	s40.newGradesTime = '12.01.2013 00:00';
+	s40.newTodos = 0;
+	s40.newTodosTime = '12.01.2013 00:00';
+	s40.optLock = 0;
+	s40.person = null;
+	s40.profileImgFn = null;
+	s40.registerPerson = null;
+	s40.startDate = '14.03.2023';
+	s40.status = 1;
+	s47.active = true;
+	s47.code = "VKL";
+	s47.created = '16.08.2010 08:28';
+	s47.creator = "sergei.babenko@gmail.com";
+	s47.id = 250114384;
+	s47.instanceClass = "SubjectType";
+	s47.institution = s0;
+	s47.modified = '01.10.2020 13:09';
+	s47.modifiedOrig = '01.10.2020 13:09';
+	s47.modifier = "infojuht@mgm.ee";
+	s47.name = "Vene keel";
+	s47.numero = 24;
+	s47.optLock = 4;
+	s45.abbr = "Eesti keel ja kirjandus";
+	s45.address = null;
+	s45.bookings = null;
+	s45.calendarEvent = null;
+	s45.capacity = "";
+	s45.created = '17.10.2012 16:15';
+	s45.creator = "46512110265";
+	s45.id = 9075587729;
+	s45.instanceClass = "Room";
+	s45.institution = s0;
+	s45.isAuto = null;
+	s45.isCalendar = null;
+	s45.isReservable = null;
+	s45.keywords = [s6];
+	s45.modified = '10.10.2022 18:43';
+	s45.modifiedOrig = '10.10.2022 18:43';
+	s45.modifier = "47109030261";
+	s45.name = "106";
+	s45.notes = "";
+	s45.optLock = 5;
+	s44.birthDay = '03.12.1982';
+	s44.cachedTagsetRoles = null;
+	s44.created = '30.08.2016 13:29';
+	s44.creator = "nat.mashchenko@gmail.com";
+	s44.endDate = null;
+	s44.gender = 1;
+	s44.gradingSubjects = null;
+	s44.id = 14097232265;
+	s44.idCode = "48212030290";
+	s44.idIssuedBy = s2;
+	s44.instanceClass = "Staff";
+	s44.institution = s0;
+	s44.modified = '17.05.2021 16:07';
+	s44.modifiedOrig = '17.05.2021 16:07';
+	s44.modifier = "infojuht@mgm.ee";
+	s44.name = null;
+	s44.name1 = "Natalia";
+	s44.name2 = "Mashchenko";
+	s44.newAbsences = 0;
+	s44.newAbsencesTime = '12.01.2013 00:00';
+	s44.newFeedEvents = 0;
+	s44.newFeedEventsTime = '12.01.2013 00:00';
+	s44.newGrades = 0;
+	s44.newGradesTime = '12.01.2013 00:00';
+	s44.newTodos = 0;
+	s44.newTodosTime = '12.01.2013 00:00';
+	s44.optLock = 6;
+	s44.person = null;
+	s44.profileImgFn = null;
+	s44.registerPerson = null;
+	s44.startDate = '30.08.2016';
+	s44.status = 1;
+	s43.active = true;
+	s43.code = "";
+	s43.created = '04.09.2023 11:07';
+	s43.creator = "infojuht@mgm.ee";
+	s43.id = 17710227951;
+	s43.instanceClass = "SubjectType";
+	s43.institution = s0;
+	s43.modified = '04.09.2023 11:07';
+	s43.modifiedOrig = '04.09.2023 11:07';
+	s43.modifier = "infojuht@mgm.ee";
+	s43.name = "Saksa keel";
+	s43.numero = 181;
+	s43.optLock = 0;
+	s51.beginHour = "12";
+	s51.beginHourMins = "40";
+	s51.beginMin = 760;
+	s51.created = '16.08.2010 08:31';
+	s51.creator = "sergei.babenko@gmail.com";
+	s51.endHour = "13";
+	s51.endHourMins = "25";
+	s51.endMin = 805;
+	s51.id = 250114392;
+	s51.instanceClass = "LessonTime";
+	s51.institution = s0;
+	s51.lengthMins = "45";
+	s51.modified = '03.01.2023 10:23';
+	s51.modifiedOrig = '03.01.2023 10:23';
+	s51.modifier = "infojuht@mgm.ee";
+	s51.name = null;
+	s51.optLock = 5;
+	s50.abbr = "Keemia";
+	s50.address = null;
+	s50.bookings = null;
+	s50.calendarEvent = null;
+	s50.capacity = "";
+	s50.created = '17.10.2012 16:20';
+	s50.creator = "46512110265";
+	s50.id = 9075593577;
+	s50.instanceClass = "Room";
+	s50.institution = s0;
+	s50.isAuto = null;
+	s50.isCalendar = null;
+	s50.isReservable = null;
+	s50.keywords = [s6];
+	s50.modified = '10.10.2022 18:51';
+	s50.modifiedOrig = '10.10.2022 18:51';
+	s50.modifier = "47109030261";
+	s50.name = "407";
+	s50.notes = "";
+	s50.optLock = 5;
+	s49.birthDay = null;
+	s49.cachedTagsetRoles = null;
+	s49.created = '26.04.2007 13:43';
+	s49.creator = "migrator";
+	s49.endDate = null;
+	s49.gender = 1;
+	s49.gradingSubjects = null;
+	s49.id = 2000015207;
+	s49.idCode = "45811020235";
+	s49.idIssuedBy = s2;
+	s49.instanceClass = "Staff";
+	s49.institution = s0;
+	s49.modified = '23.10.2023 12:34';
+	s49.modifiedOrig = '23.10.2023 12:34';
+	s49.modifier = "infojuht@mgm.ee";
+	s49.name = null;
+	s49.name1 = "Ljudmilla";
+	s49.name2 = "Dmitrijeva";
+	s49.newAbsences = 0;
+	s49.newAbsencesTime = '12.01.2013 00:00';
+	s49.newFeedEvents = 0;
+	s49.newFeedEventsTime = '12.01.2013 00:00';
+	s49.newGrades = 0;
+	s49.newGradesTime = '12.01.2013 00:00';
+	s49.newTodos = 0;
+	s49.newTodosTime = '12.01.2013 00:00';
+	s49.optLock = 59;
+	s49.person = null;
+	s49.profileImgFn = null;
+	s49.registerPerson = null;
+	s49.startDate = '26.04.2007';
+	s49.status = 1;
+	s48.active = true;
+	s48.code = "KE";
+	s48.created = '16.08.2010 08:20';
+	s48.creator = "sergei.babenko@gmail.com";
+	s48.id = 250114371;
+	s48.instanceClass = "SubjectType";
+	s48.institution = s0;
+	s48.modified = '01.10.2020 13:57';
+	s48.modifiedOrig = '01.10.2020 13:57';
+	s48.modifier = "infojuht@mgm.ee";
+	s48.name = "Keemia";
+	s48.numero = 10;
+	s48.optLock = 2;
+	s53.birthDay = '23.07.1996';
+	s53.cachedTagsetRoles = null;
+	s53.created = '31.08.2020 11:36';
+	s53.creator = "infojuht@mgm.ee";
+	s53.endDate = null;
+	s53.gender = 1;
+	s53.gradingSubjects = null;
+	s53.id = 15587190987;
+	s53.idCode = "49607230238";
+	s53.idIssuedBy = s2;
+	s53.instanceClass = "Staff";
+	s53.institution = s0;
+	s53.modified = '13.06.2023 18:31';
+	s53.modifiedOrig = '13.06.2023 18:31';
+	s53.modifier = "infojuht@mgm.ee";
+	s53.name = null;
+	s53.name1 = "Evelin";
+	s53.name2 = "Veiner";
+	s53.newAbsences = 0;
+	s53.newAbsencesTime = '12.01.2013 00:00';
+	s53.newFeedEvents = 0;
+	s53.newFeedEventsTime = '12.01.2013 00:00';
+	s53.newGrades = 0;
+	s53.newGradesTime = '12.01.2013 00:00';
+	s53.newTodos = 0;
+	s53.newTodosTime = '12.01.2013 00:00';
+	s53.optLock = 35;
+	s53.person = null;
+	s53.profileImgFn = null;
+	s53.registerPerson = null;
+	s53.startDate = '31.08.2020';
+	s53.status = 1;
+	s71.active = true;
+	s71.code = "PRIK 1";
+	s71.created = '28.10.2019 14:31';
+	s71.creator = "35611060267";
+	s71.id = 15111208041;
+	s71.instanceClass = "SubjectType";
+	s71.institution = s0;
+	s71.modified = '14.11.2023 09:48';
+	s71.modifiedOrig = '14.11.2023 09:48';
+	s71.modifier = "infojuht@mgm.ee";
+	s71.name = "Praktiline inglise keel (1r\u00FChm)";
+	s71.numero = 109;
+	s71.optLock = 4;
+	s55.abbr = "eesti keel";
+	s55.address = null;
+	s55.bookings = null;
+	s55.calendarEvent = null;
+	s55.capacity = "";
+	s55.created = '17.10.2012 16:20';
+	s55.creator = "46512110265";
+	s55.id = 9075593373;
+	s55.instanceClass = "Room";
+	s55.institution = s0;
+	s55.isAuto = null;
+	s55.isCalendar = null;
+	s55.isReservable = null;
+	s55.keywords = [s6];
+	s55.modified = '10.10.2022 18:51';
+	s55.modifiedOrig = '10.10.2022 18:51';
+	s55.modifier = "47109030261";
+	s55.name = "405";
+	s55.notes = "";
+	s55.optLock = 5;
+	s54.active = true;
+	s54.code = "DS";
+	s54.created = '06.09.2010 08:44';
+	s54.creator = "sergei.babenko@gmail.com";
+	s54.id = 2033765671;
+	s54.instanceClass = "SubjectType";
+	s54.institution = s0;
+	s54.modified = '29.08.2022 12:59';
+	s54.modifiedOrig = '29.08.2022 12:59';
+	s54.modifier = "infojuht@mgm.ee";
+	s54.name = "Developing skills";
+	s54.numero = 35;
+	s54.optLock = 3;
+	s63.birthDay = '07.08.1961';
+	s63.cachedTagsetRoles = null;
+	s63.created = '17.05.2007 12:09';
+	s63.creator = "migrator";
+	s63.endDate = null;
+	s63.gender = 1;
+	s63.gradingSubjects = null;
+	s63.id = 2000015182;
+	s63.idCode = "46108070369";
+	s63.idIssuedBy = s2;
+	s63.instanceClass = "Staff";
+	s63.institution = s0;
+	s63.modified = '12.06.2023 16:08';
+	s63.modifiedOrig = '12.06.2023 16:08';
+	s63.modifier = "infojuht@mgm.ee";
+	s63.name = null;
+	s63.name1 = "Svetlana";
+	s63.name2 = "Atajants";
+	s63.newAbsences = 0;
+	s63.newAbsencesTime = '12.01.2013 00:00';
+	s63.newFeedEvents = 0;
+	s63.newFeedEventsTime = '12.01.2013 00:00';
+	s63.newGrades = 0;
+	s63.newGradesTime = '12.01.2013 00:00';
+	s63.newTodos = 0;
+	s63.newTodosTime = '12.01.2013 00:00';
+	s63.optLock = 113;
+	s63.person = null;
+	s63.profileImgFn = null;
+	s63.registerPerson = null;
+	s63.startDate = '17.05.2007';
+	s63.status = 1;
+	s62.active = true;
+	s62.code = "";
+	s62.created = '06.09.2010 09:45';
+	s62.creator = "sergei.babenko@gmail.com";
+	s62.id = 2033776887;
+	s62.instanceClass = "SubjectType";
+	s62.institution = s0;
+	s62.modified = '01.09.2023 13:31';
+	s62.modifiedOrig = '01.09.2023 13:31';
+	s62.modifier = "infojuht@mgm.ee";
+	s62.name = "Kunstiajalugu";
+	s62.numero = 36;
+	s62.optLock = 5;
+	s73.active = true;
+	s73.code = "";
+	s73.created = '14.09.2013 20:42';
+	s73.creator = "46512110265";
+	s73.id = 13331331185;
+	s73.instanceClass = "SubjectType";
+	s73.institution = s0;
+	s73.modified = '14.11.2023 09:48';
+	s73.modifiedOrig = '14.11.2023 09:48';
+	s73.modifier = "infojuht@mgm.ee";
+	s73.name = "Inglise keel (1r\u00FChm)";
+	s73.numero = 61;
+	s73.optLock = 4;
+	s75.birthDay = '15.09.1975';
+	s75.cachedTagsetRoles = null;
+	s75.created = '09.05.2012 11:01';
+	s75.creator = "esenia.antropova@mail.ru";
+	s75.endDate = null;
+	s75.gender = 1;
+	s75.gradingSubjects = null;
+	s75.id = 7267188525;
+	s75.idCode = "47509150260";
+	s75.idIssuedBy = s2;
+	s75.instanceClass = "Staff";
+	s75.institution = s0;
+	s75.modified = '13.06.2022 11:20';
+	s75.modifiedOrig = '13.06.2022 11:20';
+	s75.modifier = "infojuht@mgm.ee";
+	s75.name = null;
+	s75.name1 = "Eseniya";
+	s75.name2 = "Antropova";
+	s75.newAbsences = 0;
+	s75.newAbsencesTime = '12.01.2013 00:00';
+	s75.newFeedEvents = 0;
+	s75.newFeedEventsTime = '12.01.2013 00:00';
+	s75.newGrades = 0;
+	s75.newGradesTime = '12.01.2013 00:00';
+	s75.newTodos = 0;
+	s75.newTodosTime = '12.01.2013 00:00';
+	s75.optLock = 9;
+	s75.person = null;
+	s75.profileImgFn = null;
+	s75.registerPerson = null;
+	s75.startDate = '09.05.2012';
+	s75.status = 1;
+	s74.active = true;
+	s74.code = "";
+	s74.created = '25.08.2020 10:53';
+	s74.creator = "35611060267";
+	s74.id = 15583163795;
+	s74.instanceClass = "SubjectType";
+	s74.institution = s0;
+	s74.modified = '25.08.2020 10:53';
+	s74.modifiedOrig = '25.08.2020 10:53';
+	s74.modifier = "35611060267";
+	s74.name = "Draama ja teatr";
+	s74.numero = 127;
+	s74.optLock = 0;
+	dwr.engine.remote.handleCallback("36", "0",
+	{
+		aeg: '13.04.2024 00:12',
+		errors: [],
+		isError: 0,
+		notices: [],
+		returnObject:
+		{
+			calendar: s1,
+			daysList: ['08.04.2024', '09.04.2024', '10.04.2024', '11.04.2024', '12.04.2024', '13.04.2024', '14.04.2024'],
+			institution: s0,
+			todoInstList: [
+			{
+				institutionId: 263,
+				individual: false,
+				created: '01.04.2024 13:23',
+				content: "<p>1. Nurkade teisendamine (radiaanm&otilde;&otilde;t ja kraadim&otilde;&otilde;t)<\/p><p>2. Kaare pikkus ja sektori pindala.<\/p><p>3. Mis tahes nurga siinus, koosinus ja tangens.<\/p><p>4. Taandamisvalemid.<\/p><p>5. Negatiivse nurga siinus, koosinus ja tangens.<\/p>",
+				subjectId: 15552519123,
+				authorName1: "Maria",
+				allowStudentSubmission: false,
+				isGraded: true,
+				isTest: true,
+				authorName2: "Ivanova",
+				name: "Mis tahes nurga siinus, koosinus ja tangens",
+				files: [],
+				id: 18101668958,
+				deadline: '08.04.2024',
+				subjectName: "Matemaatika lai"
+			}],
+			calendarEventList: [dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "14",
+				beginHourMins: "30",
+				beginMin: 870,
+				calendar: s1,
+				classLevel: s4,
+				created: '09.03.2024 21:16',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "15",
+				endHourMins: "15",
+				endMin: 915,
+				eventDate: '11.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18053555357,
+				instanceClass: "CalendarEvent",
+				lessonTime: s12,
+				location: null,
+				modified: '09.03.2024 21:16',
+				modifiedOrig: '09.03.2024 21:16',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s25,
+				sourceEnvId: null,
+				staff: s35,
+				subjectType: s34,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "15",
+				beginHourMins: "30",
+				beginMin: 930,
+				calendar: s1,
+				classLevel: s4,
+				created: '09.03.2024 21:17',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "16",
+				endHourMins: "15",
+				endMin: 975,
+				eventDate: '11.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18053555724,
+				instanceClass: "CalendarEvent",
+				lessonTime: s7,
+				location: null,
+				modified: '09.03.2024 21:17',
+				modifiedOrig: '09.03.2024 21:17',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s10,
+				sourceEnvId: null,
+				staff: s9,
+				subjectType: s8,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "09",
+				beginHourMins: "50",
+				beginMin: 590,
+				calendar: s1,
+				classLevel: s4,
+				created: '12.03.2024 08:08',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "10",
+				endHourMins: "35",
+				endMin: 635,
+				eventDate: '19.03.2024',
+				eventDateEnd: '09.04.2024',
+				id: 18057958616,
+				instanceClass: "CalendarEvent",
+				lessonTime: s30,
+				location: null,
+				modified: '09.04.2024 06:20',
+				modifiedOrig: '09.04.2024 06:20',
+				modifier: "tiina.kihulane@gmail.com",
+				name: null,
+				optLock: 3,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s52,
+				sourceEnvId: null,
+				staff: s37,
+				subjectType: s46,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "15",
+				beginHourMins: "30",
+				beginMin: 930,
+				calendar: s1,
+				classLevel: s4,
+				created: '04.02.2024 01:55',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "16",
+				endHourMins: "15",
+				endMin: 975,
+				eventDate: '09.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17982750810,
+				instanceClass: "CalendarEvent",
+				lessonTime: s7,
+				location: null,
+				modified: '07.02.2024 14:06',
+				modifiedOrig: '07.02.2024 14:06',
+				modifier: "47109030261",
+				name: null,
+				optLock: 2,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s10,
+				sourceEnvId: null,
+				staff: s9,
+				subjectType: s8,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "14",
+				beginHourMins: "30",
+				beginMin: 870,
+				calendar: s1,
+				classLevel: s4,
+				created: '01.02.2024 20:40',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "15",
+				endHourMins: "15",
+				endMin: 915,
+				eventDate: '09.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17979594961,
+				instanceClass: "CalendarEvent",
+				lessonTime: s12,
+				location: null,
+				modified: '10.03.2024 09:55',
+				modifiedOrig: '10.03.2024 09:55',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 3,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s15,
+				sourceEnvId: null,
+				staff: s14,
+				subjectType: s13,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "13",
+				beginHourMins: "35",
+				beginMin: 815,
+				calendar: s1,
+				classLevel: s4,
+				created: '01.02.2024 20:39',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "14",
+				endHourMins: "20",
+				endMin: 860,
+				eventDate: '09.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17979594564,
+				instanceClass: "CalendarEvent",
+				lessonTime: s17,
+				location: null,
+				modified: '04.02.2024 01:56',
+				modifiedOrig: '04.02.2024 01:56',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 1,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s15,
+				sourceEnvId: null,
+				staff: s14,
+				subjectType: s13,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "15",
+				beginHourMins: "30",
+				beginMin: 930,
+				calendar: s1,
+				classLevel: s4,
+				created: '07.02.2024 08:03',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "16",
+				endHourMins: "15",
+				endMin: 975,
+				eventDate: '14.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17990051704,
+				instanceClass: "CalendarEvent",
+				lessonTime: s7,
+				location: null,
+				modified: '10.03.2024 09:37',
+				modifiedOrig: '10.03.2024 09:37',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 4,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s20,
+				sourceEnvId: null,
+				staff: s19,
+				subjectType: s18,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "13",
+				beginHourMins: "35",
+				beginMin: 815,
+				calendar: s1,
+				classLevel: s4,
+				created: '07.02.2024 08:01',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "14",
+				endHourMins: "20",
+				endMin: 860,
+				eventDate: '14.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17990046095,
+				instanceClass: "CalendarEvent",
+				lessonTime: s17,
+				location: null,
+				modified: '06.04.2024 21:02',
+				modifiedOrig: '06.04.2024 21:02',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 8,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s20,
+				sourceEnvId: null,
+				staff: s19,
+				subjectType: s18,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "00",
+				beginMin: 480,
+				calendar: s1,
+				classLevel: s4,
+				created: '02.12.2023 02:54',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "08",
+				endHourMins: "45",
+				endMin: 525,
+				eventDate: '05.12.2023',
+				eventDateEnd: '31.08.2024',
+				id: 17884849778,
+				instanceClass: "CalendarEvent",
+				lessonTime: s36,
+				location: null,
+				modified: '18.02.2024 14:54',
+				modifiedOrig: '18.02.2024 14:54',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 5,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s24,
+				sourceEnvId: null,
+				staff: s23,
+				subjectType: s22,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "55",
+				beginMin: 535,
+				calendar: s1,
+				classLevel: s4,
+				created: '02.12.2023 02:54',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "09",
+				endHourMins: "40",
+				endMin: 580,
+				eventDate: '05.12.2023',
+				eventDateEnd: '31.08.2024',
+				id: 17884849779,
+				instanceClass: "CalendarEvent",
+				lessonTime: s31,
+				location: null,
+				modified: '18.02.2024 14:54',
+				modifiedOrig: '18.02.2024 14:54',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 5,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s24,
+				sourceEnvId: null,
+				staff: s23,
+				subjectType: s22,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "14",
+				beginHourMins: "30",
+				beginMin: 870,
+				calendar: s1,
+				classLevel: s4,
+				created: '07.02.2024 08:02',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "15",
+				endHourMins: "15",
+				endMin: 915,
+				eventDate: '14.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17990049601,
+				instanceClass: "CalendarEvent",
+				lessonTime: s12,
+				location: null,
+				modified: '11.02.2024 20:29',
+				modifiedOrig: '11.02.2024 20:29',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 2,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s20,
+				sourceEnvId: null,
+				staff: s19,
+				subjectType: s18,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "10",
+				beginHourMins: "45",
+				beginMin: 645,
+				calendar: s1,
+				classLevel: s4,
+				created: '15.02.2024 07:35',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "11",
+				endHourMins: "30",
+				endMin: 690,
+				eventDate: '22.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18008666423,
+				instanceClass: "CalendarEvent",
+				lessonTime: s38,
+				location: null,
+				modified: '11.04.2024 07:27',
+				modifiedOrig: '11.04.2024 07:27',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 8,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s25,
+				sourceEnvId: null,
+				staff: s61,
+				subjectType: s60,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "16",
+				beginHourMins: "15",
+				beginMin: 975,
+				calendar: s1,
+				classLevel: s4,
+				created: '08.02.2024 19:23',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "17",
+				endHourMins: "00",
+				endMin: 1020,
+				eventDate: '12.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17995663714,
+				instanceClass: "CalendarEvent",
+				lessonTime: s42,
+				location: null,
+				modified: '10.03.2024 07:09',
+				modifiedOrig: '10.03.2024 07:09',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 4,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s10,
+				sourceEnvId: null,
+				staff: s9,
+				subjectType: s8,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "11",
+				beginHourMins: "40",
+				beginMin: 700,
+				calendar: s1,
+				classLevel: s4,
+				created: '06.12.2023 14:18',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "12",
+				endHourMins: "25",
+				endMin: 745,
+				eventDate: '14.12.2023',
+				eventDateEnd: '31.08.2024',
+				id: 17893577696,
+				instanceClass: "CalendarEvent",
+				lessonTime: s56,
+				location: null,
+				modified: '08.02.2024 19:25',
+				modifiedOrig: '08.02.2024 19:25',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 6,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s10,
+				sourceEnvId: null,
+				staff: s9,
+				subjectType: s8,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "14",
+				beginHourMins: "30",
+				beginMin: 870,
+				calendar: s1,
+				classLevel: s4,
+				created: '07.01.2024 05:27',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "15",
+				endHourMins: "15",
+				endMin: 915,
+				eventDate: '19.01.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17926779617,
+				instanceClass: "CalendarEvent",
+				lessonTime: s12,
+				location: null,
+				modified: '10.03.2024 01:01',
+				modifiedOrig: '10.03.2024 01:01',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 4,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s29,
+				sourceEnvId: null,
+				staff: s28,
+				subjectType: s27,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "13",
+				beginHourMins: "35",
+				beginMin: 815,
+				calendar: s1,
+				classLevel: s4,
+				created: '07.01.2024 05:26',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "14",
+				endHourMins: "20",
+				endMin: 860,
+				eventDate: '19.01.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17926779615,
+				instanceClass: "CalendarEvent",
+				lessonTime: s17,
+				location: null,
+				modified: '10.03.2024 01:04',
+				modifiedOrig: '10.03.2024 01:04',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 8,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s29,
+				sourceEnvId: null,
+				staff: s28,
+				subjectType: s27,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "09",
+				beginHourMins: "50",
+				beginMin: 590,
+				calendar: s1,
+				classLevel: s4,
+				created: '09.03.2024 21:15',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "10",
+				endHourMins: "35",
+				endMin: 635,
+				eventDate: '11.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18053555137,
+				instanceClass: "CalendarEvent",
+				lessonTime: s30,
+				location: null,
+				modified: '29.03.2024 21:39',
+				modifiedOrig: '29.03.2024 21:39',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 3,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s68,
+				sourceEnvId: null,
+				staff: s70,
+				subjectType: s69,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "09",
+				beginHourMins: "50",
+				beginMin: 590,
+				calendar: s1,
+				classLevel: s4,
+				created: '12.03.2024 22:47',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "10",
+				endHourMins: "35",
+				endMin: 635,
+				eventDate: '20.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18061026967,
+				instanceClass: "CalendarEvent",
+				lessonTime: s30,
+				location: null,
+				modified: '17.03.2024 20:52',
+				modifiedOrig: '17.03.2024 20:52',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 2,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s33,
+				sourceEnvId: null,
+				staff: s32,
+				subjectType: dwr.engine.remote.newObject("ee.ekool.model.curriculum.SubjectType",
+				{
+					active: true,
+					code: "",
+					created: '01.10.2020 13:06',
+					creator: "infojuht@mgm.ee",
+					id: 15662578488,
+					instanceClass: "SubjectType",
+					institution: s0,
+					modified: '04.09.2023 11:06',
+					modifiedOrig: '04.09.2023 11:06',
+					modifier: "infojuht@mgm.ee",
+					name: "\u00D5igesti k\u00F5nelemine (1r\u00FChm)",
+					numero: 132,
+					optLock: 1
+				}),
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "55",
+				beginMin: 535,
+				calendar: s1,
+				classLevel: s4,
+				created: '12.03.2024 22:47',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "09",
+				endHourMins: "40",
+				endMin: 580,
+				eventDate: '20.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18061026862,
+				instanceClass: "CalendarEvent",
+				lessonTime: s31,
+				location: null,
+				modified: '17.03.2024 20:52',
+				modifiedOrig: '17.03.2024 20:52',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 2,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s33,
+				sourceEnvId: null,
+				staff: s32,
+				subjectType: s39,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "14",
+				beginHourMins: "30",
+				beginMin: 870,
+				calendar: s1,
+				classLevel: s4,
+				created: '10.03.2024 00:56',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "15",
+				endHourMins: "15",
+				endMin: 915,
+				eventDate: '12.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18053593955,
+				instanceClass: "CalendarEvent",
+				lessonTime: s12,
+				location: null,
+				modified: '17.03.2024 20:52',
+				modifiedOrig: '17.03.2024 20:52',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 1,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s25,
+				sourceEnvId: null,
+				staff: s35,
+				subjectType: s34,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "00",
+				beginMin: 480,
+				calendar: s1,
+				classLevel: s4,
+				created: '01.02.2024 20:14',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "08",
+				endHourMins: "45",
+				endMin: 525,
+				eventDate: '09.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17979576083,
+				instanceClass: "CalendarEvent",
+				lessonTime: s36,
+				location: null,
+				modified: '17.03.2024 20:53',
+				modifiedOrig: '17.03.2024 20:53',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 12,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: dwr.engine.remote.newObject("ee.ekool.model.Room",
+				{
+					abbr: "Vene keel ja kirjandus",
+					address: null,
+					bookings: null,
+					calendarEvent: null,
+					capacity: "",
+					created: '17.10.2012 16:17',
+					creator: "46512110265",
+					id: 9075589621,
+					instanceClass: "Room",
+					institution: s0,
+					isAuto: null,
+					isCalendar: null,
+					isReservable: null,
+					keywords: [s6],
+					modified: '10.10.2022 18:46',
+					modifiedOrig: '10.10.2022 18:46',
+					modifier: "47109030261",
+					name: "209",
+					notes: "",
+					optLock: 3
+				}),
+				sourceEnvId: null,
+				staff: s37,
+				subjectType: dwr.engine.remote.newObject("ee.ekool.model.curriculum.SubjectType",
+				{
+					active: true,
+					code: "PREK 2",
+					created: '13.09.2013 23:28',
+					creator: "46512110265",
+					id: 13318557992,
+					instanceClass: "SubjectType",
+					institution: s0,
+					modified: '14.11.2023 09:44',
+					modifiedOrig: '14.11.2023 09:44',
+					modifier: "infojuht@mgm.ee",
+					name: "Praktiline eesti keel (2r\u00FChm)",
+					numero: 45,
+					optLock: 6
+				}),
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "10",
+				beginHourMins: "45",
+				beginMin: 645,
+				calendar: s1,
+				classLevel: s4,
+				created: '18.03.2024 21:58',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "11",
+				endHourMins: "30",
+				endMin: 690,
+				eventDate: '26.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18074701725,
+				instanceClass: "CalendarEvent",
+				lessonTime: s38,
+				location: null,
+				modified: '24.03.2024 12:31',
+				modifiedOrig: '24.03.2024 12:31',
+				modifier: "tiina.kihulane@gmail.com",
+				name: null,
+				optLock: 1,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s59,
+				sourceEnvId: null,
+				staff: s58,
+				subjectType: s57,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "13",
+				beginHourMins: "35",
+				beginMin: 815,
+				calendar: s1,
+				classLevel: s4,
+				created: '17.03.2024 19:58',
+				creator: "tiina.kihulane@gmail.com",
+				descr: null,
+				endHour: "14",
+				endHourMins: "20",
+				endMin: 860,
+				eventDate: '19.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18071494036,
+				instanceClass: "CalendarEvent",
+				lessonTime: s17,
+				location: null,
+				modified: '22.03.2024 12:36',
+				modifiedOrig: '22.03.2024 12:36',
+				modifier: "tiina.kihulane@gmail.com",
+				name: null,
+				optLock: 3,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s72,
+				sourceEnvId: null,
+				staff: s67,
+				subjectType: s66,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "13",
+				beginHourMins: "35",
+				beginMin: 815,
+				calendar: s1,
+				classLevel: s4,
+				created: '20.03.2024 20:34',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "14",
+				endHourMins: "20",
+				endMin: 860,
+				eventDate: '28.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18080536564,
+				instanceClass: "CalendarEvent",
+				lessonTime: s17,
+				location: null,
+				modified: '10.04.2024 20:58',
+				modifiedOrig: '10.04.2024 20:58',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 7,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s33,
+				sourceEnvId: null,
+				staff: s32,
+				subjectType: s39,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "10",
+				beginHourMins: "45",
+				beginMin: 645,
+				calendar: s1,
+				classLevel: s4,
+				created: '20.01.2024 15:22',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "11",
+				endHourMins: "30",
+				endMin: 690,
+				eventDate: '22.01.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17957120653,
+				instanceClass: "CalendarEvent",
+				lessonTime: s38,
+				location: null,
+				modified: '04.02.2024 01:52',
+				modifiedOrig: '04.02.2024 01:52',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 5,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s24,
+				sourceEnvId: null,
+				staff: s65,
+				subjectType: s64,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "14",
+				beginHourMins: "30",
+				beginMin: 870,
+				calendar: s1,
+				classLevel: s4,
+				created: '20.03.2024 18:44',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "15",
+				endHourMins: "15",
+				endMin: 915,
+				eventDate: '28.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18080213893,
+				instanceClass: "CalendarEvent",
+				lessonTime: s12,
+				location: null,
+				modified: '20.03.2024 18:44',
+				modifiedOrig: '20.03.2024 18:44',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s41,
+				sourceEnvId: null,
+				staff: s40,
+				subjectType: s47,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "09",
+				beginHourMins: "50",
+				beginMin: 590,
+				calendar: s1,
+				classLevel: s4,
+				created: '20.03.2024 18:43',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "10",
+				endHourMins: "35",
+				endMin: 635,
+				eventDate: '28.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18080213429,
+				instanceClass: "CalendarEvent",
+				lessonTime: s30,
+				location: null,
+				modified: '20.03.2024 18:43',
+				modifiedOrig: '20.03.2024 18:43',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s41,
+				sourceEnvId: null,
+				staff: s40,
+				subjectType: dwr.engine.remote.newObject("ee.ekool.model.curriculum.SubjectType",
+				{
+					active: true,
+					code: "",
+					created: '08.06.2020 09:21',
+					creator: "35611060267",
+					id: 15541922367,
+					instanceClass: "SubjectType",
+					institution: s0,
+					modified: '08.06.2020 09:21',
+					modifiedOrig: '08.06.2020 09:21',
+					modifier: "35611060267",
+					name: "Kirjandus",
+					numero: 122,
+					optLock: 0
+				}),
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "16",
+				beginHourMins: "15",
+				beginMin: 975,
+				calendar: s1,
+				classLevel: s4,
+				created: '20.01.2024 16:15',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "17",
+				endHourMins: "00",
+				endMin: 1020,
+				eventDate: '23.01.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17957132846,
+				instanceClass: "CalendarEvent",
+				lessonTime: s42,
+				location: null,
+				modified: '17.03.2024 20:52',
+				modifiedOrig: '17.03.2024 20:52',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 9,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s45,
+				sourceEnvId: null,
+				staff: s44,
+				subjectType: s43,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "15",
+				beginHourMins: "30",
+				beginMin: 930,
+				calendar: s1,
+				classLevel: s4,
+				created: '20.01.2024 16:14',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "16",
+				endHourMins: "15",
+				endMin: 975,
+				eventDate: '23.01.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17957132817,
+				instanceClass: "CalendarEvent",
+				lessonTime: s7,
+				location: null,
+				modified: '03.03.2024 05:06',
+				modifiedOrig: '03.03.2024 05:06',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 6,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s45,
+				sourceEnvId: null,
+				staff: s44,
+				subjectType: s43,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "12",
+				beginHourMins: "40",
+				beginMin: 760,
+				calendar: s1,
+				classLevel: s4,
+				created: '03.03.2024 05:04',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "13",
+				endHourMins: "25",
+				endMin: 805,
+				eventDate: '04.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18035296394,
+				instanceClass: "CalendarEvent",
+				lessonTime: s51,
+				location: null,
+				modified: '17.03.2024 20:51',
+				modifiedOrig: '17.03.2024 20:51',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 3,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s33,
+				sourceEnvId: null,
+				staff: s32,
+				subjectType: s39,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "13",
+				beginHourMins: "35",
+				beginMin: 815,
+				calendar: s1,
+				classLevel: s4,
+				created: '03.03.2024 05:05',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "14",
+				endHourMins: "20",
+				endMin: 860,
+				eventDate: '04.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18035296396,
+				instanceClass: "CalendarEvent",
+				lessonTime: s17,
+				location: null,
+				modified: '03.03.2024 05:05',
+				modifiedOrig: '03.03.2024 05:05',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s50,
+				sourceEnvId: null,
+				staff: s49,
+				subjectType: s48,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "55",
+				beginMin: 535,
+				calendar: s1,
+				classLevel: s4,
+				created: '01.02.2024 20:14',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "09",
+				endHourMins: "40",
+				endMin: 580,
+				eventDate: '09.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17979576309,
+				instanceClass: "CalendarEvent",
+				lessonTime: s31,
+				location: null,
+				modified: '22.03.2024 12:39',
+				modifiedOrig: '22.03.2024 12:39',
+				modifier: "tiina.kihulane@gmail.com",
+				name: null,
+				optLock: 11,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: dwr.engine.remote.newObject("ee.ekool.model.Room",
+				{
+					abbr: "Inglise keel",
+					address: null,
+					bookings: null,
+					calendarEvent: null,
+					capacity: "",
+					created: '17.10.2012 16:20',
+					creator: "46512110265",
+					id: 9075593134,
+					instanceClass: "Room",
+					institution: s0,
+					isAuto: null,
+					isCalendar: null,
+					isReservable: null,
+					keywords: [s6],
+					modified: '10.10.2022 18:51',
+					modifiedOrig: '10.10.2022 18:51',
+					modifier: "47109030261",
+					name: "404",
+					notes: "",
+					optLock: 5
+				}),
+				sourceEnvId: null,
+				staff: s37,
+				subjectType: s46,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "09",
+				beginHourMins: "50",
+				beginMin: 590,
+				calendar: s1,
+				classLevel: s4,
+				created: '21.03.2024 23:04',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "10",
+				endHourMins: "35",
+				endMin: 635,
+				eventDate: '29.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18083385829,
+				instanceClass: "CalendarEvent",
+				lessonTime: s30,
+				location: null,
+				modified: '21.03.2024 23:04',
+				modifiedOrig: '21.03.2024 23:04',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s41,
+				sourceEnvId: null,
+				staff: s40,
+				subjectType: s47,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "00",
+				beginMin: 480,
+				calendar: s1,
+				classLevel: s4,
+				created: '26.01.2024 18:15',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "08",
+				endHourMins: "45",
+				endMin: 525,
+				eventDate: '02.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17966211491,
+				instanceClass: "CalendarEvent",
+				lessonTime: s36,
+				location: null,
+				modified: '17.03.2024 20:53',
+				modifiedOrig: '17.03.2024 20:53',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 15,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s33,
+				sourceEnvId: null,
+				staff: s32,
+				subjectType: s39,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "10",
+				beginHourMins: "45",
+				beginMin: 645,
+				calendar: s1,
+				classLevel: s4,
+				created: '26.01.2024 18:54',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "11",
+				endHourMins: "30",
+				endMin: 690,
+				eventDate: '02.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17966229258,
+				instanceClass: "CalendarEvent",
+				lessonTime: s38,
+				location: null,
+				modified: '18.02.2024 15:01',
+				modifiedOrig: '18.02.2024 15:01',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 4,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s50,
+				sourceEnvId: null,
+				staff: s49,
+				subjectType: s48,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "12",
+				beginHourMins: "40",
+				beginMin: 760,
+				calendar: s1,
+				classLevel: s4,
+				created: '09.04.2024 18:29',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "13",
+				endHourMins: "25",
+				endMin: 805,
+				eventDate: '10.04.2024',
+				eventDateEnd: '10.04.2024',
+				id: 18120773104,
+				instanceClass: "CalendarEvent",
+				lessonTime: s51,
+				location: null,
+				modified: '09.04.2024 18:29',
+				modifiedOrig: '09.04.2024 18:29',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s52,
+				sourceEnvId: null,
+				staff: s53,
+				subjectType: s71,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "55",
+				beginMin: 535,
+				calendar: s1,
+				classLevel: s4,
+				created: '03.04.2024 21:40',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "09",
+				endHourMins: "40",
+				endMin: 580,
+				eventDate: '11.04.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18108876102,
+				instanceClass: "CalendarEvent",
+				lessonTime: s31,
+				location: null,
+				modified: '03.04.2024 21:40',
+				modifiedOrig: '03.04.2024 21:40',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s55,
+				sourceEnvId: null,
+				staff: s53,
+				subjectType: s54,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "55",
+				beginMin: 535,
+				calendar: s1,
+				classLevel: s4,
+				created: '03.04.2024 21:39',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "09",
+				endHourMins: "40",
+				endMin: 580,
+				eventDate: '11.04.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18108875727,
+				instanceClass: "CalendarEvent",
+				lessonTime: s31,
+				location: null,
+				modified: '06.04.2024 22:18',
+				modifiedOrig: '06.04.2024 22:18',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 2,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s55,
+				sourceEnvId: null,
+				staff: s53,
+				subjectType: s54,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "11",
+				beginHourMins: "40",
+				beginMin: 700,
+				calendar: s1,
+				classLevel: s4,
+				created: '18.03.2024 21:59',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "12",
+				endHourMins: "25",
+				endMin: 745,
+				eventDate: '26.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18074701969,
+				instanceClass: "CalendarEvent",
+				lessonTime: s56,
+				location: null,
+				modified: '24.03.2024 12:31',
+				modifiedOrig: '24.03.2024 12:31',
+				modifier: "tiina.kihulane@gmail.com",
+				name: null,
+				optLock: 1,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s59,
+				sourceEnvId: null,
+				staff: s58,
+				subjectType: s57,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "16",
+				beginHourMins: "15",
+				beginMin: 975,
+				calendar: s1,
+				classLevel: s4,
+				created: '09.03.2024 21:25',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "17",
+				endHourMins: "00",
+				endMin: 1020,
+				eventDate: '14.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18053557896,
+				instanceClass: "CalendarEvent",
+				lessonTime: s42,
+				location: null,
+				modified: '29.03.2024 16:06',
+				modifiedOrig: '29.03.2024 16:06',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 3,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: dwr.engine.remote.newObject("ee.ekool.model.Room",
+				{
+					abbr: "",
+					address: null,
+					bookings: null,
+					calendarEvent: null,
+					capacity: "",
+					created: '15.09.2013 20:26',
+					creator: "46512110265",
+					id: 13345046692,
+					instanceClass: "Room",
+					institution: s0,
+					isAuto: null,
+					isCalendar: null,
+					isReservable: null,
+					keywords: [s6],
+					modified: '29.01.2024 08:22',
+					modifiedOrig: '29.01.2024 08:22',
+					modifier: "infojuht@mgm.ee",
+					name: "Kodu\u00F5pe",
+					notes: "",
+					optLock: 5
+				}),
+				sourceEnvId: null,
+				staff: s35,
+				subjectType: s34,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "12",
+				beginHourMins: "40",
+				beginMin: 760,
+				calendar: s1,
+				classLevel: s4,
+				created: '03.04.2024 21:42',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "13",
+				endHourMins: "25",
+				endMin: 805,
+				eventDate: '11.04.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18108877714,
+				instanceClass: "CalendarEvent",
+				lessonTime: s51,
+				location: null,
+				modified: '06.04.2024 22:18',
+				modifiedOrig: '06.04.2024 22:18',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 1,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s55,
+				sourceEnvId: null,
+				staff: s53,
+				subjectType: s54,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "11",
+				beginHourMins: "40",
+				beginMin: 700,
+				calendar: s1,
+				classLevel: s4,
+				created: '05.03.2024 20:16',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "12",
+				endHourMins: "25",
+				endMin: 745,
+				eventDate: '13.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18042597487,
+				instanceClass: "CalendarEvent",
+				lessonTime: s56,
+				location: null,
+				modified: '29.03.2024 19:58',
+				modifiedOrig: '29.03.2024 19:58',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 2,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: dwr.engine.remote.newObject("ee.ekool.model.Room",
+				{
+					abbr: "muusika",
+					address: null,
+					bookings: null,
+					calendarEvent: null,
+					capacity: "",
+					created: '17.10.2012 16:23',
+					creator: "46512110265",
+					id: 9075597105,
+					instanceClass: "Room",
+					institution: s0,
+					isAuto: null,
+					isCalendar: null,
+					isReservable: null,
+					keywords: [s6],
+					modified: '10.10.2022 15:39',
+					modifiedOrig: '10.10.2022 15:39',
+					modifier: "47109030261",
+					name: "Muusikaklass",
+					notes: "",
+					optLock: 3
+				}),
+				sourceEnvId: null,
+				staff: dwr.engine.remote.newObject("ee.ekool.model.roles.Staff",
+				{
+					birthDay: '11.03.1963',
+					cachedTagsetRoles: null,
+					created: '15.01.2008 11:58',
+					creator: "migrator",
+					endDate: null,
+					gender: 1,
+					gradingSubjects: null,
+					id: 2000015232,
+					idCode: "46303110325",
+					idIssuedBy: s2,
+					instanceClass: "Staff",
+					institution: s0,
+					modified: '12.06.2023 11:37',
+					modifiedOrig: '12.06.2023 11:37',
+					modifier: "infojuht@mgm.ee",
+					name: null,
+					name1: "Tatjana",
+					name2: "Kov\u0161",
+					newAbsences: 0,
+					newAbsencesTime: '12.01.2013 00:00',
+					newFeedEvents: 0,
+					newFeedEventsTime: '12.01.2013 00:00',
+					newGrades: 0,
+					newGradesTime: '12.01.2013 00:00',
+					newTodos: 0,
+					newTodosTime: '12.01.2013 00:00',
+					optLock: 32,
+					person: null,
+					profileImgFn: null,
+					registerPerson: null,
+					startDate: '15.01.2008',
+					status: 1
+				}),
+				subjectType: dwr.engine.remote.newObject("ee.ekool.model.curriculum.SubjectType",
+				{
+					active: true,
+					code: "MU",
+					created: '16.08.2010 08:25',
+					creator: "sergei.babenko@gmail.com",
+					id: 250114379,
+					instanceClass: "SubjectType",
+					institution: s0,
+					modified: '01.10.2020 14:06',
+					modifiedOrig: '01.10.2020 14:06',
+					modifier: "infojuht@mgm.ee",
+					name: "Muusika",
+					numero: 19,
+					optLock: 3
+				}),
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "09",
+				beginHourMins: "50",
+				beginMin: 590,
+				calendar: s1,
+				classLevel: s4,
+				created: '10.04.2024 03:05',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "10",
+				endHourMins: "35",
+				endMin: 635,
+				eventDate: '10.04.2024',
+				eventDateEnd: '10.04.2024',
+				id: 18121278100,
+				instanceClass: "CalendarEvent",
+				lessonTime: s30,
+				location: null,
+				modified: '10.04.2024 03:05',
+				modifiedOrig: '10.04.2024 03:05',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s52,
+				sourceEnvId: null,
+				staff: s37,
+				subjectType: dwr.engine.remote.newObject("ee.ekool.model.curriculum.SubjectType",
+				{
+					active: true,
+					code: "",
+					created: '04.09.2023 11:06',
+					creator: "infojuht@mgm.ee",
+					id: 17710225609,
+					instanceClass: "SubjectType",
+					institution: s0,
+					modified: '04.09.2023 11:06',
+					modifiedOrig: '04.09.2023 11:06',
+					modifier: "infojuht@mgm.ee",
+					name: "\u00D5igesti k\u00F5nelemine (2r\u00FChm)",
+					numero: 180,
+					optLock: 0
+				}),
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "55",
+				beginMin: 535,
+				calendar: s1,
+				classLevel: s4,
+				created: '10.04.2024 03:05',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "09",
+				endHourMins: "40",
+				endMin: 580,
+				eventDate: '10.04.2024',
+				eventDateEnd: '10.04.2024',
+				id: 18121278099,
+				instanceClass: "CalendarEvent",
+				lessonTime: s31,
+				location: null,
+				modified: '10.04.2024 03:05',
+				modifiedOrig: '10.04.2024 03:05',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s52,
+				sourceEnvId: null,
+				staff: s37,
+				subjectType: s46,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "09",
+				beginHourMins: "50",
+				beginMin: 590,
+				calendar: s1,
+				classLevel: s4,
+				created: '26.03.2024 06:11',
+				creator: "tiina.kihulane@gmail.com",
+				descr: null,
+				endHour: "10",
+				endHourMins: "35",
+				endMin: 635,
+				eventDate: '02.04.2024',
+				eventDateEnd: '09.04.2024',
+				id: 18089992287,
+				instanceClass: "CalendarEvent",
+				lessonTime: s30,
+				location: null,
+				modified: '09.04.2024 06:29',
+				modifiedOrig: '09.04.2024 06:29',
+				modifier: "tiina.kihulane@gmail.com",
+				name: null,
+				optLock: 2,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s52,
+				sourceEnvId: null,
+				staff: s61,
+				subjectType: s60,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "10",
+				beginHourMins: "45",
+				beginMin: 645,
+				calendar: s1,
+				classLevel: s4,
+				created: '26.03.2024 16:10',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "11",
+				endHourMins: "30",
+				endMin: 690,
+				eventDate: '03.04.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18092353415,
+				instanceClass: "CalendarEvent",
+				lessonTime: s38,
+				location: null,
+				modified: '26.03.2024 16:10',
+				modifiedOrig: '26.03.2024 16:10',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 1,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s59,
+				sourceEnvId: null,
+				staff: s63,
+				subjectType: s62,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "15",
+				beginHourMins: "30",
+				beginMin: 930,
+				calendar: s1,
+				classLevel: s4,
+				created: '27.03.2024 19:33',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "16",
+				endHourMins: "15",
+				endMin: 975,
+				eventDate: '04.04.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18095723752,
+				instanceClass: "CalendarEvent",
+				lessonTime: s7,
+				location: null,
+				modified: '27.03.2024 19:33',
+				modifiedOrig: '27.03.2024 19:33',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s59,
+				sourceEnvId: null,
+				staff: s63,
+				subjectType: s62,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "00",
+				beginMin: 480,
+				calendar: s1,
+				classLevel: s4,
+				created: '10.04.2024 18:35',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "08",
+				endHourMins: "45",
+				endMin: 525,
+				eventDate: '11.04.2024',
+				eventDateEnd: '11.04.2024',
+				id: 18123672153,
+				instanceClass: "CalendarEvent",
+				lessonTime: s36,
+				location: null,
+				modified: '10.04.2024 18:35',
+				modifiedOrig: '10.04.2024 18:35',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s52,
+				sourceEnvId: null,
+				staff: s65,
+				subjectType: s64,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "12",
+				beginHourMins: "40",
+				beginMin: 760,
+				calendar: s1,
+				classLevel: s4,
+				created: '06.04.2024 18:24',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "13",
+				endHourMins: "25",
+				endMin: 805,
+				eventDate: '08.04.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18114493893,
+				instanceClass: "CalendarEvent",
+				lessonTime: s51,
+				location: null,
+				modified: '06.04.2024 18:24',
+				modifiedOrig: '06.04.2024 18:24',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s20,
+				sourceEnvId: null,
+				staff: s67,
+				subjectType: s66,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "16",
+				beginHourMins: "15",
+				beginMin: 975,
+				calendar: s1,
+				classLevel: s4,
+				created: '26.01.2024 18:13',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "17",
+				endHourMins: "00",
+				endMin: 1020,
+				eventDate: '02.02.2024',
+				eventDateEnd: '31.08.2024',
+				id: 17966210307,
+				instanceClass: "CalendarEvent",
+				lessonTime: s42,
+				location: null,
+				modified: '06.04.2024 19:04',
+				modifiedOrig: '06.04.2024 19:04',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 8,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s10,
+				sourceEnvId: null,
+				staff: s9,
+				subjectType: s8,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "10",
+				beginHourMins: "45",
+				beginMin: 645,
+				calendar: s1,
+				classLevel: s4,
+				created: '06.04.2024 22:00',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "11",
+				endHourMins: "30",
+				endMin: 690,
+				eventDate: '11.04.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18114825639,
+				instanceClass: "CalendarEvent",
+				lessonTime: s38,
+				location: null,
+				modified: '06.04.2024 22:00',
+				modifiedOrig: '06.04.2024 22:00',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s68,
+				sourceEnvId: null,
+				staff: s37,
+				subjectType: s46,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "55",
+				beginMin: 535,
+				calendar: s1,
+				classLevel: s4,
+				created: '06.04.2024 22:14',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "09",
+				endHourMins: "40",
+				endMin: 580,
+				eventDate: '12.04.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18114827872,
+				instanceClass: "CalendarEvent",
+				lessonTime: s31,
+				location: null,
+				modified: '06.04.2024 22:14',
+				modifiedOrig: '06.04.2024 22:14',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: dwr.engine.remote.newObject("ee.ekool.model.Room",
+				{
+					abbr: "inglise keel",
+					address: null,
+					bookings: null,
+					calendarEvent: null,
+					capacity: "",
+					created: '17.10.2012 16:20',
+					creator: "46512110265",
+					id: 9075592770,
+					instanceClass: "Room",
+					institution: s0,
+					isAuto: null,
+					isCalendar: null,
+					isReservable: null,
+					keywords: [s6],
+					modified: '10.10.2022 18:50',
+					modifiedOrig: '10.10.2022 18:50',
+					modifier: "47109030261",
+					name: "401",
+					notes: "",
+					optLock: 5
+				}),
+				sourceEnvId: null,
+				staff: s53,
+				subjectType: s73,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "00",
+				beginMin: 480,
+				calendar: s1,
+				classLevel: s4,
+				created: '17.03.2024 19:53',
+				creator: "tiina.kihulane@gmail.com",
+				descr: null,
+				endHour: "08",
+				endHourMins: "45",
+				endMin: 525,
+				eventDate: '18.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18071491088,
+				instanceClass: "CalendarEvent",
+				lessonTime: s36,
+				location: null,
+				modified: '06.04.2024 22:22',
+				modifiedOrig: '06.04.2024 22:22',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 2,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s68,
+				sourceEnvId: null,
+				staff: s70,
+				subjectType: s69,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "11",
+				beginHourMins: "40",
+				beginMin: 700,
+				calendar: s1,
+				classLevel: s4,
+				created: '29.03.2024 17:03',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "12",
+				endHourMins: "25",
+				endMin: 745,
+				eventDate: '05.04.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18098554221,
+				instanceClass: "CalendarEvent",
+				lessonTime: s56,
+				location: null,
+				modified: '29.03.2024 17:03',
+				modifiedOrig: '29.03.2024 17:03',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s10,
+				sourceEnvId: null,
+				staff: s9,
+				subjectType: s8,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "12",
+				beginHourMins: "40",
+				beginMin: 760,
+				calendar: s1,
+				classLevel: s4,
+				created: '17.03.2024 19:57',
+				creator: "tiina.kihulane@gmail.com",
+				descr: null,
+				endHour: "13",
+				endHourMins: "25",
+				endMin: 805,
+				eventDate: '19.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18071493308,
+				instanceClass: "CalendarEvent",
+				lessonTime: s51,
+				location: null,
+				modified: '29.03.2024 19:55',
+				modifiedOrig: '29.03.2024 19:55',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 4,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s72,
+				sourceEnvId: null,
+				staff: s67,
+				subjectType: s71,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "13",
+				beginHourMins: "35",
+				beginMin: 815,
+				calendar: s1,
+				classLevel: s4,
+				created: '17.03.2024 20:01',
+				creator: "tiina.kihulane@gmail.com",
+				descr: null,
+				endHour: "14",
+				endHourMins: "20",
+				endMin: 860,
+				eventDate: '21.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18071495866,
+				instanceClass: "CalendarEvent",
+				lessonTime: s17,
+				location: null,
+				modified: '29.03.2024 19:57',
+				modifiedOrig: '29.03.2024 19:57',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 3,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: dwr.engine.remote.newObject("ee.ekool.model.Room",
+				{
+					abbr: "inglise keel",
+					address: null,
+					bookings: null,
+					calendarEvent: null,
+					capacity: "",
+					created: '17.10.2012 16:19',
+					creator: "46512110265",
+					id: 9075592534,
+					instanceClass: "Room",
+					institution: s0,
+					isAuto: null,
+					isCalendar: null,
+					isReservable: null,
+					keywords: [s6],
+					modified: '10.10.2022 18:50',
+					modifiedOrig: '10.10.2022 18:50',
+					modifier: "47109030261",
+					name: "400",
+					notes: "",
+					optLock: 5
+				}),
+				sourceEnvId: null,
+				staff: s67,
+				subjectType: s66,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s26
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "55",
+				beginMin: 535,
+				calendar: s1,
+				classLevel: s4,
+				created: '17.03.2024 19:54',
+				creator: "tiina.kihulane@gmail.com",
+				descr: null,
+				endHour: "09",
+				endHourMins: "40",
+				endMin: 580,
+				eventDate: '18.03.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18071491273,
+				instanceClass: "CalendarEvent",
+				lessonTime: s31,
+				location: null,
+				modified: '29.03.2024 21:38',
+				modifiedOrig: '29.03.2024 21:38',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 1,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s68,
+				sourceEnvId: null,
+				staff: s70,
+				subjectType: s69,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "12",
+				beginHourMins: "40",
+				beginMin: 760,
+				calendar: s1,
+				classLevel: s4,
+				created: '29.03.2024 22:25',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "13",
+				endHourMins: "25",
+				endMin: 805,
+				eventDate: '05.04.2024',
+				eventDateEnd: '31.08.2024',
+				id: 18098842433,
+				instanceClass: "CalendarEvent",
+				lessonTime: s51,
+				location: null,
+				modified: '29.03.2024 22:25',
+				modifiedOrig: '29.03.2024 22:25',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: dwr.engine.remote.newObject("ee.ekool.model.Room",
+				{
+					abbr: "",
+					address: null,
+					bookings: null,
+					calendarEvent: null,
+					capacity: "",
+					created: '17.10.2012 16:17',
+					creator: "46512110265",
+					id: 9075588764,
+					instanceClass: "Room",
+					institution: s0,
+					isAuto: null,
+					isCalendar: null,
+					isReservable: null,
+					keywords: [s6],
+					modified: '10.10.2022 18:45',
+					modifiedOrig: '10.10.2022 18:45',
+					modifier: "47109030261",
+					name: "206",
+					notes: "",
+					optLock: 5
+				}),
+				sourceEnvId: null,
+				staff: dwr.engine.remote.newObject("ee.ekool.model.roles.Staff",
+				{
+					birthDay: '05.06.1963',
+					cachedTagsetRoles: null,
+					created: '24.04.2007 11:26',
+					creator: "migrator",
+					endDate: null,
+					gender: 1,
+					gradingSubjects: null,
+					id: 2000015173,
+					idCode: "46306050351",
+					idIssuedBy: s2,
+					instanceClass: "Staff",
+					institution: s0,
+					modified: '23.10.2023 12:30',
+					modifiedOrig: '23.10.2023 12:30',
+					modifier: "infojuht@mgm.ee",
+					name: null,
+					name1: "Nade\u017Eda",
+					name2: "Minajeva",
+					newAbsences: 0,
+					newAbsencesTime: '12.01.2013 00:00',
+					newFeedEvents: 0,
+					newFeedEventsTime: '12.01.2013 00:00',
+					newGrades: 0,
+					newGradesTime: '12.01.2013 00:00',
+					newTodos: 0,
+					newTodosTime: '12.01.2013 00:00',
+					optLock: 81,
+					person: null,
+					profileImgFn: null,
+					registerPerson: null,
+					startDate: '24.04.2007',
+					status: 1
+				}),
+				subjectType: dwr.engine.remote.newObject("ee.ekool.model.curriculum.SubjectType",
+				{
+					active: true,
+					code: "Klass",
+					created: '09.09.2019 20:40',
+					creator: "35611060267",
+					id: 15073913512,
+					instanceClass: "SubjectType",
+					institution: s0,
+					modified: '09.09.2019 20:40',
+					modifiedOrig: '09.09.2019 20:40',
+					modifier: "35611060267",
+					name: "Klassijuhataja tund",
+					numero: 108,
+					optLock: 0
+				}),
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s11
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "11",
+				beginHourMins: "40",
+				beginMin: 700,
+				calendar: s1,
+				classLevel: s4,
+				created: '07.04.2024 20:03',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "12",
+				endHourMins: "25",
+				endMin: 745,
+				eventDate: '08.04.2024',
+				eventDateEnd: '08.04.2024',
+				id: 18115430217,
+				instanceClass: "CalendarEvent",
+				lessonTime: s56,
+				location: null,
+				modified: '07.04.2024 20:08',
+				modifiedOrig: '07.04.2024 20:08',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 1,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s52,
+				sourceEnvId: null,
+				staff: s53,
+				subjectType: s54,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "11",
+				beginHourMins: "40",
+				beginMin: 700,
+				calendar: s1,
+				classLevel: s4,
+				created: '07.04.2024 20:09',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "12",
+				endHourMins: "25",
+				endMin: 745,
+				eventDate: '08.04.2024',
+				eventDateEnd: '08.04.2024',
+				id: 18115435748,
+				instanceClass: "CalendarEvent",
+				lessonTime: s56,
+				location: null,
+				modified: '07.04.2024 20:09',
+				modifiedOrig: '07.04.2024 20:09',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s45,
+				sourceEnvId: null,
+				staff: dwr.engine.remote.newObject("ee.ekool.model.roles.Staff",
+				{
+					birthDay: '03.09.1971',
+					cachedTagsetRoles: null,
+					created: '22.09.2008 09:47',
+					creator: "migrator",
+					endDate: null,
+					gender: 1,
+					gradingSubjects: null,
+					id: 2000015272,
+					idCode: "47109030261",
+					idIssuedBy: s2,
+					instanceClass: "Staff",
+					institution: s0,
+					modified: '08.06.2023 11:22',
+					modifiedOrig: '08.06.2023 11:22',
+					modifier: "infojuht@mgm.ee",
+					name: null,
+					name1: "Tiina",
+					name2: "Kihulane",
+					newAbsences: 0,
+					newAbsencesTime: '12.01.2013 00:00',
+					newFeedEvents: 0,
+					newFeedEventsTime: '12.01.2013 00:00',
+					newGrades: 0,
+					newGradesTime: '12.01.2013 00:00',
+					newTodos: 0,
+					newTodosTime: '12.01.2013 00:00',
+					optLock: 97,
+					person: null,
+					profileImgFn: null,
+					registerPerson: null,
+					startDate: '22.09.2008',
+					status: 1
+				}),
+				subjectType: dwr.engine.remote.newObject("ee.ekool.model.curriculum.SubjectType",
+				{
+					active: true,
+					code: "",
+					created: '08.09.2019 11:07',
+					creator: "35611060267",
+					id: 15072517624,
+					instanceClass: "SubjectType",
+					institution: s0,
+					modified: '02.10.2023 09:49',
+					modifiedOrig: '02.10.2023 09:49',
+					modifier: "infojuht@mgm.ee",
+					name: "Ettevalmistus eesti keele eksamiks",
+					numero: 98,
+					optLock: 3
+				}),
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s3
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "12",
+				beginHourMins: "40",
+				beginMin: 760,
+				calendar: s1,
+				classLevel: s4,
+				created: '08.04.2024 12:47',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "13",
+				endHourMins: "25",
+				endMin: 805,
+				eventDate: '09.04.2024',
+				eventDateEnd: '09.04.2024',
+				id: 18117056555,
+				instanceClass: "CalendarEvent",
+				lessonTime: s51,
+				location: null,
+				modified: '08.04.2024 12:47',
+				modifiedOrig: '08.04.2024 12:47',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s52,
+				sourceEnvId: null,
+				staff: s32,
+				subjectType: dwr.engine.remote.newObject("ee.ekool.model.curriculum.SubjectType",
+				{
+					active: true,
+					code: "PREK 1",
+					created: '13.09.2013 23:28',
+					creator: "46512110265",
+					id: 13318259276,
+					instanceClass: "SubjectType",
+					institution: s0,
+					modified: '14.11.2023 09:43',
+					modifiedOrig: '14.11.2023 09:43',
+					modifier: "infojuht@mgm.ee",
+					name: "Praktiline eesti keel (1r\u00FChm)",
+					numero: 44,
+					optLock: 4
+				}),
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "13",
+				beginHourMins: "35",
+				beginMin: 815,
+				calendar: s1,
+				classLevel: s4,
+				created: '08.04.2024 14:07',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "14",
+				endHourMins: "20",
+				endMin: 860,
+				eventDate: '09.04.2024',
+				eventDateEnd: '09.04.2024',
+				id: 18117493717,
+				instanceClass: "CalendarEvent",
+				lessonTime: s17,
+				location: null,
+				modified: '08.04.2024 14:07',
+				modifiedOrig: '08.04.2024 14:07',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 0,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s52,
+				sourceEnvId: null,
+				staff: s53,
+				subjectType: s73,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s21
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "16",
+				beginHourMins: "15",
+				beginMin: 975,
+				calendar: s1,
+				classLevel: s4,
+				created: '03.09.2023 16:02',
+				creator: "47109030261",
+				descr: null,
+				endHour: "17",
+				endHourMins: "00",
+				endMin: 1020,
+				eventDate: '06.09.2023',
+				eventDateEnd: '31.08.2024',
+				id: 17709465657,
+				instanceClass: "CalendarEvent",
+				lessonTime: s42,
+				location: null,
+				modified: '04.02.2024 01:54',
+				modifiedOrig: '04.02.2024 01:54',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 5,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s45,
+				sourceEnvId: null,
+				staff: s75,
+				subjectType: s74,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "15",
+				beginHourMins: "30",
+				beginMin: 930,
+				calendar: s1,
+				classLevel: s4,
+				created: '28.10.2023 12:50',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "16",
+				endHourMins: "15",
+				endMin: 975,
+				eventDate: '01.11.2023',
+				eventDateEnd: '31.08.2024',
+				id: 17804634366,
+				instanceClass: "CalendarEvent",
+				lessonTime: s7,
+				location: null,
+				modified: '04.02.2024 01:54',
+				modifiedOrig: '04.02.2024 01:54',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 3,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: s45,
+				sourceEnvId: null,
+				staff: s75,
+				subjectType: s74,
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			}), dwr.engine.remote.newObject("ee.ekool.model.calendar.CalendarEvent",
+			{
+				absenceReason: null,
+				beginHour: "08",
+				beginHourMins: "00",
+				beginMin: 480,
+				calendar: s1,
+				classLevel: s4,
+				created: '28.10.2023 12:48',
+				creator: "matthias.vanamb@mgm.ee",
+				descr: null,
+				endHour: "08",
+				endHourMins: "45",
+				endMin: 525,
+				eventDate: '01.11.2023',
+				eventDateEnd: '31.08.2024',
+				id: 17804634095,
+				instanceClass: "CalendarEvent",
+				lessonTime: s36,
+				location: null,
+				modified: '04.02.2024 03:20',
+				modifiedOrig: '04.02.2024 03:20',
+				modifier: "matthias.vanamb@mgm.ee",
+				name: null,
+				optLock: 5,
+				parallelIdentifier: s5,
+				person: null,
+				publishType: 1,
+				recurring: true,
+				room: dwr.engine.remote.newObject("ee.ekool.model.Room",
+				{
+					abbr: "",
+					address: null,
+					bookings: null,
+					calendarEvent: null,
+					capacity: "",
+					created: '10.09.2013 18:20',
+					creator: "46512110265",
+					id: 13271485889,
+					instanceClass: "Room",
+					institution: s0,
+					isAuto: null,
+					isCalendar: null,
+					isReservable: null,
+					keywords: [s6],
+					modified: '10.10.2022 15:40',
+					modifiedOrig: '10.10.2022 15:40',
+					modifier: "47109030261",
+					name: "aula",
+					notes: "",
+					optLock: 3
+				}),
+				sourceEnvId: null,
+				staff: dwr.engine.remote.newObject("ee.ekool.model.roles.Staff",
+				{
+					birthDay: '25.11.1967',
+					cachedTagsetRoles: null,
+					created: '02.09.2019 21:44',
+					creator: "35611060267",
+					endDate: null,
+					gender: 0,
+					gradingSubjects: null,
+					id: 15067909525,
+					idCode: "36711250288",
+					idIssuedBy: s2,
+					instanceClass: "Staff",
+					institution: s0,
+					modified: '18.09.2023 13:25',
+					modifiedOrig: '18.09.2023 13:25',
+					modifier: "infojuht@mgm.ee",
+					name: null,
+					name1: "Kaider",
+					name2: "Vardja",
+					newAbsences: 0,
+					newAbsencesTime: '12.01.2013 00:00',
+					newFeedEvents: 0,
+					newFeedEventsTime: '12.01.2013 00:00',
+					newGrades: 0,
+					newGradesTime: '12.01.2013 00:00',
+					newTodos: 0,
+					newTodosTime: '12.01.2013 00:00',
+					optLock: 51,
+					person: null,
+					profileImgFn: null,
+					registerPerson: null,
+					startDate: '02.09.2019',
+					status: 1
+				}),
+				subjectType: dwr.engine.remote.newObject("ee.ekool.model.curriculum.SubjectType",
+				{
+					active: true,
+					code: "",
+					created: '01.09.2023 13:32',
+					creator: "infojuht@mgm.ee",
+					id: 17708748091,
+					instanceClass: "SubjectType",
+					institution: s0,
+					modified: '01.09.2023 13:32',
+					modifiedOrig: '01.09.2023 13:32',
+					modifier: "infojuht@mgm.ee",
+					name: "Seltskonnatants",
+					numero: 178,
+					optLock: 0
+				}),
+				substitutions: [],
+				training: false,
+				trainingInformation: null,
+				workday: s16
+			})],
+			yearNo: 2024,
+			weekNo: 15,
+			lessonTimes: [s36, s56, s51, dwr.engine.remote.newObject("ee.ekool.model.LessonTime",
+			{
+				beginHour: "17",
+				beginHourMins: "00",
+				beginMin: 1020,
+				created: '16.08.2010 08:33',
+				creator: "sergei.babenko@gmail.com",
+				endHour: "17",
+				endHourMins: "45",
+				endMin: 1065,
+				id: 250114397,
+				instanceClass: "LessonTime",
+				institution: s0,
+				lengthMins: "45",
+				modified: '29.10.2019 16:52',
+				modifiedOrig: '29.10.2019 16:52',
+				modifier: "35611060267",
+				name: null,
+				optLock: 2
+			}), s31, dwr.engine.remote.newObject("ee.ekool.model.LessonTime",
+			{
+				beginHour: "17",
+				beginHourMins: "50",
+				beginMin: 1070,
+				created: '25.10.2013 14:05',
+				creator: "46512110265",
+				endHour: "18",
+				endHourMins: "35",
+				endMin: 1115,
+				id: 13635714545,
+				instanceClass: "LessonTime",
+				institution: s0,
+				lengthMins: "45",
+				modified: '29.10.2019 17:37',
+				modifiedOrig: '29.10.2019 17:37',
+				modifier: "35611060267",
+				name: null,
+				optLock: 2
+			}), dwr.engine.remote.newObject("ee.ekool.model.LessonTime",
+			{
+				beginHour: "18",
+				beginHourMins: "40",
+				beginMin: 1120,
+				created: '25.10.2013 14:05',
+				creator: "46512110265",
+				endHour: "19",
+				endHourMins: "25",
+				endMin: 1165,
+				id: 13635714560,
+				instanceClass: "LessonTime",
+				institution: s0,
+				lengthMins: "45",
+				modified: '29.10.2019 17:39',
+				modifiedOrig: '29.10.2019 17:39',
+				modifier: "35611060267",
+				name: null,
+				optLock: 3
+			}), dwr.engine.remote.newObject("ee.ekool.model.LessonTime",
+			{
+				beginHour: "19",
+				beginHourMins: "30",
+				beginMin: 1170,
+				created: '14.09.2017 10:54',
+				creator: "46512110265",
+				endHour: "20",
+				endHourMins: "15",
+				endMin: 1215,
+				id: 14431212436,
+				instanceClass: "LessonTime",
+				institution: s0,
+				lengthMins: "45",
+				modified: '29.10.2019 17:40',
+				modifiedOrig: '29.10.2019 17:40',
+				modifier: "35611060267",
+				name: null,
+				optLock: 2
+			}), dwr.engine.remote.newObject("ee.ekool.model.LessonTime",
+			{
+				beginHour: "20",
+				beginHourMins: "20",
+				beginMin: 1220,
+				created: '14.09.2017 10:55',
+				creator: "46512110265",
+				endHour: "21",
+				endHourMins: "05",
+				endMin: 1265,
+				id: 14431213086,
+				instanceClass: "LessonTime",
+				institution: s0,
+				lengthMins: "45",
+				modified: '29.10.2019 17:40',
+				modifiedOrig: '29.10.2019 17:40',
+				modifier: "35611060267",
+				name: null,
+				optLock: 1
+			}), dwr.engine.remote.newObject("ee.ekool.model.LessonTime",
+			{
+				beginHour: "21",
+				beginHourMins: "10",
+				beginMin: 1270,
+				created: '29.10.2019 17:41',
+				creator: "35611060267",
+				endHour: "21",
+				endHourMins: "55",
+				endMin: 1315,
+				id: 15112542197,
+				instanceClass: "LessonTime",
+				institution: s0,
+				lengthMins: "45",
+				modified: '29.10.2019 17:41',
+				modifiedOrig: '29.10.2019 17:41',
+				modifier: "35611060267",
+				name: null,
+				optLock: 0
+			}), s30, s38, s17, s12, s7, s42]
+		}
+	});
+})();
+//#DWR-END#
